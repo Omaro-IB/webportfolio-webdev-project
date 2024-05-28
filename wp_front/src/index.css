@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'CooperBlack';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+  url('/assets/fonts/CooperBlackStd.woff2') format('woff2'),
+  url('/assets/fonts/CooperBlackStd.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'CooperBlack';
+  font-style: italic;
+  font-weight: 400;
+  src: local(''),
+  url('/assets/fonts/CooperBlackStd-Italic.woff2') format('woff2'),
+  url('/assets/fonts/CooperBlackStd-Italic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'GTPressuraMono-Light';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+  url('/assets/fonts/GTPressuraMono-Light.woff2') format('woff2'),
+  url('/assets/fonts/GTPressuraMono-Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'GTPressuraMono';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+  url('/assets/fonts/GTPressuraMono.woff2') format('woff2'),
+  url('/assets/fonts/GTPressuraMono.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Plaak';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+  url('/assets/fonts/Plaak-SemicondensedRegular.woff2') format('woff2'),
+  url('/assets/fonts/Plaak-SemicondensedRegular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Plaak';
+  font-style: oblique;
+  font-weight: 400;
+  src: local(''),
+  url('/assets/fonts/Plaak-CondensedBold.woff2') format('woff2'),
+  url('/assets/fonts/Plaak-CondensedBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Verdana';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+  url('/assets/fonts/Verdana.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Verdana';
+  font-style: oblique;
+  font-weight: 400;
+  src: local(''),
+  url('/assets/fonts/Verdana-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Verdana';
+  font-style: italic;
+  font-weight: 400;
+  src: local(''),
+  url('/assets/fonts/Verdana-Italic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Verdana';
+  font-style: oblique 23deg;
+  font-weight: 400;
+  src: local(''),
+  url('/assets/fonts/Verdana-BoldItalic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Consolas';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+  url('/assets/fonts/Consolas.woff') format('woff');
+}
+
+
+@layer base {
+  body {
+    @apply font-[Plaak];
+  }
+  li {
+    @apply px-4;
+    @apply cursor-pointer
+  }
+}
+.content-div {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+}
+.content-div:hover {
+  background-image: linear-gradient(
+          to right,
+          rgba(11, 80, 54, 0.8),
+          hsla(91, 18%, 45%, 0.8)
+  )!important;
+}
