@@ -16,6 +16,7 @@ module.exports = {
       'beige': '#e9d3bb',
       'pinkbeige': '#e6e6e6',
       'whitehighlight': '#f9f1e8',
+      'rederror': '#f14e4e',
       'codewhite': '#c5c5c5',
       'codeblue': '#506ec5',
       'codepurple': '#825471',

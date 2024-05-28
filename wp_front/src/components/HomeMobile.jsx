@@ -13,6 +13,7 @@ import {
 } from 'react-icons/fa';
 import { BsRss } from "react-icons/bs";
 import rss from "/assets/rss.xml?url";
+import SocialIcons from "./SocialIcons.jsx";
 
 
 const TyperSmall = () => {
@@ -52,7 +53,7 @@ const HomeMobile = () => {
                     <p className="self-start ml-[10vw] mb-[1vw] mt-[10vw] max-w-[75vw] text-gray-900 text-[15px]">
                         I’m a data scientist with a focus on machine learning, computational mathematics, and also like network engineering too. Currently pursuing my bachelor's degree, and am eager to embark on an internship opportunity.
                         <br></br><br></br>
-                        Are you looking for someone driven and capable? Someone with an analytic and mathematic mindset? Or maybe you need someone with a comprehensive understanding of the theory and practical implementation of machine learning algorithms? If so, feel free to reach out to me for further details at omarom.ibra at gmail.com.
+                        Are you looking for someone driven and capable? Someone with an analytic and mathematical mindset? Or maybe you need someone with a comprehensive understanding of the theory and practical implementation of machine learning algorithms? If so, feel free to reach out to me for further details at omarom.ibra at gmail.com.
                     </p>
 
                     <div className="self-start max-w-fit mt-5 ml-[10vw]"> {/* buttons */}
@@ -66,28 +67,8 @@ const HomeMobile = () => {
                         </div>
                     </div>
 
-                    <div className="self-start mt-4 ml-[10vw] grid grid-cols-2 max-w-fit" > {/* social media icons */}
-                        <div className="grid grid-cols-4"> {/* RSS, Github, Linkedin, Mail */}
-                        <a href={rss} className="mx-1 h-6 w-6 duration-500 shadow-box2 hover:shadow-none group border-solid border-2 border-black cursor-pointer">
-                            <BsRss style = {{width: "20px", height: "20px"}}/>
-                        </a>
-                        <a href="https://www.linkedin.com/in/omaribr" className="mx-1 h-6 w-6 duration-500 shadow-box2 hover:shadow-none group border-solid border-2 border-black cursor-pointer">
-                            <FaLinkedin style = {{width: "20px", height: "20px"}}/>
-                        </a>
-                        <a href="https://github.com/Omaro-IB" className="mx-1 h-6 w-6 duration-500 shadow-box2 hover:shadow-none group border-solid border-2 border-black cursor-pointer">
-                            <FaGithub style = {{width: "20px", height: "20px"}}/>
-                        </a>
-                        <a href="mailto:omarom.ibra@gmail.com" className="mx-1 h-6 w-6 duration-500 shadow-box2 hover:shadow-none group border-solid border-2 border-black cursor-pointer">
-                            <HiOutlineMail style = {{width: "20px", height: "20px"}}/>
-                        </a>
-                        </div>
-                        {/* Resume */}
-                        <a href={resume} className="mx-2 h-6 duration-500 shadow-box2 hover:shadow-none group border-solid border-2 border-black cursor-pointer" style = {{width: "80px", height: "25px"}}>
-                            <div className="grid grid-cols-2" style = {{width: "40px", height: "40px"}}>
-                            <BsFillPersonLinesFill style = {{width: "20px", height: "20px"}}/>
-                            <p style = {{width: "20px", height: "20px"}}>&nbsp;Resume</p>
-                            </div>
-                        </a>
+                    <div className="self-start mt-4 ml-[10vw] max-w-fit" > {/* social media icons */}
+                        <SocialIcons />
                     </div>
 
                     <Link to="projects" smooth={true} duration={1000}>

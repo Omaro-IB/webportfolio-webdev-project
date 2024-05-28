@@ -1,18 +1,11 @@
 import {HiArrowNarrowRight, HiOutlineMail} from 'react-icons/hi';
 import me from '/assets/me.png';
 import hero from '/assets/home-hero-desktop.png'
-import resume from "/assets/resume.pdf";
 import { Link } from "react-scroll";
 import { Link as RouterLink} from "react-router-dom";
 import '../App.css';
 import { TypeAnimation } from 'react-type-animation';
-import { BsFillPersonLinesFill } from 'react-icons/bs';
-import {
-    FaGithub,
-    FaLinkedin,
-} from 'react-icons/fa';
-import { BsRss } from "react-icons/bs";
-import rss from "/assets/rss.xml?url";
+import SocialIcons from "./SocialIcons.jsx";
 
 
 
@@ -35,7 +28,6 @@ const TyperBig = () => {
 const HomeDesktop = () => {
     return (
         <div
-            name="home"
             id = "home"
             className="z-0 h-screen w-full"
         >
@@ -58,7 +50,7 @@ const HomeDesktop = () => {
                     <p className="self-start mb-[1vw] mt-[5vw] ml-[7vw] mr-[5vw] max-w-[300px] sm:max-w-screen-sm text-gray-900 text-[17px] 2xl:text-[20px]">
                         I’m a data scientist with a focus on machine learning, computational mathematics, and also like network engineering too. Currently pursuing my bachelor's degree, and am eager to embark on an internship opportunity.
                         <br></br><br></br>
-                        Are you looking for someone driven and capable? Someone with an analytic and mathematic mindset? Or maybe you need someone with a comprehensive understanding of the theory and practical implementation of machine learning algorithms? If so, feel free to reach out to me for further details at omarom.ibra at gmail.com.
+                        Are you looking for someone driven and capable? Someone with an analytic and mathematical mindset? Or maybe you need someone with a comprehensive understanding of the theory and practical implementation of machine learning algorithms? If so, feel free to reach out to me for further details at omarom.ibra at gmail.com.
                     </p>
 
                     <div className="self-start mt-5 ml-[7vw] mb-[1vw]"> {/* buttons */}
@@ -72,28 +64,8 @@ const HomeDesktop = () => {
                         </div>
                     </div>
 
-                    <div className="self-start mt-4 grid grid-cols-2 ml-[7vw] mb-[1vw]" > {/* social media icons */}
-                        <div className="grid grid-cols-4"> {/* RSS, Github, Linkedin, Mail */}
-                        <a href={rss} className="mx-1 h-6 w-6 duration-500 shadow-box2 hover:shadow-none group border-solid border-2 border-black cursor-pointer">
-                            <BsRss style = {{width: "20px", height: "20px"}}/>
-                        </a>
-                        <a href="https://www.linkedin.com/in/omaribr" className="mx-1 h-6 w-6 duration-500 shadow-box2 hover:shadow-none group border-solid border-2 border-black cursor-pointer">
-                            <FaLinkedin style = {{width: "20px", height: "20px"}}/>
-                        </a>
-                        <a href="https://github.com/Omaro-IB" className="mx-1 h-6 w-6 duration-500 shadow-box2 hover:shadow-none group border-solid border-2 border-black cursor-pointer">
-                            <FaGithub style = {{width: "20px", height: "20px"}}/>
-                        </a>
-                        <a href="mailto:omarom.ibra@gmail.com" className="mx-1 h-6 w-6 duration-500 shadow-box2 hover:shadow-none group border-solid border-2 border-black cursor-pointer">
-                            <HiOutlineMail style = {{width: "20px", height: "20px"}}/>
-                        </a>
-                        </div>
-                        {/* Resume */}
-                        <a href={resume} className="mx-2 h-6 duration-500 shadow-box2 hover:shadow-none group border-solid border-2 border-black cursor-pointer" style = {{width: "80px", height: "25px"}}>
-                            <div className="grid grid-cols-2" style = {{width: "40px", height: "40px"}}>
-                            <BsFillPersonLinesFill style = {{width: "20px", height: "20px"}}/>
-                            <p style = {{width: "20px", height: "20px"}}>&nbsp;Resume</p>
-                            </div>
-                        </a>
+                    <div className="self-start mt-4 ml-[7vw] mb-[1vw]" > {/* social media icons */}
+                        <SocialIcons />
                     </div>
 
                     <Link to="projects" smooth={true} duration={1000}>

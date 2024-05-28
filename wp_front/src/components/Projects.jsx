@@ -34,7 +34,7 @@ const Projects = () => {
 
 
     return (
-        <div name='projects' id='projects' className='py-[70vh] sticky w-full md:h-screen text-[#000000] bg-[#e9d3bb]' style={{paddingTop: `${padding}vh`, paddingBottom: `${padding}vh`}}> {/* Project div */}
+        <div name='projects' id='projects' className='py-[70vh] sticky w-full md:h-screen text-black bg-beige' style={{paddingTop: `${padding}vh`, paddingBottom: `${padding}vh`}}> {/* Project div */}
             <div className='max-w-fit mx-auto p-4 flex flex-col justify-center w-full h-full'> {/* Parent div */}
                 <div className='mt-20 pb-8 w-full flex justify-center items-center flex-col'>   {/* Title div */}
                     <p className='text-4xl font-bold inline border-b-4 text-[#000000] border-[#383838]]'>
