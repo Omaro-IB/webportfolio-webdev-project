@@ -38,7 +38,7 @@ const Projects = () => {
             <div className='max-w-fit mx-auto p-4 flex flex-col justify-center w-full h-full'> {/* Parent div */}
                 <div className='mt-20 pb-8 w-full flex justify-center items-center flex-col'>   {/* Title div */}
                     <p className='text-4xl font-bold inline border-b-4 text-[#000000] border-[#383838]]'>
-                        <em className="text-greydef">/Home/</em>Projects
+                        <em className="text-greydef">/Home/</em>#Projects
                     </p>
                     <div className="flex justify-between">
                         <p className='py-6 text-2xl'>Check out some of my work &nbsp;- &nbsp;</p> {/* TODO */}
@@ -64,7 +64,7 @@ const Projects = () => {
                                         Demo
                                     </button>
                                 </a>
-                                <a href='https://github.com/Omaro-IB'>  {/* TODO: Update link to github page */}
+                                <a href='https://github.com/Omaro-IB/minimalrecipe-scripting-tool'>
                                     <button className='text-center px-4 py-3 m-2 bg-white text-pinkbeige font-bold text-lg'>
                                         Code
                                     </button>

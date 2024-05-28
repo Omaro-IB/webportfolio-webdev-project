@@ -8,7 +8,7 @@ const Contact = () => {
             <div className='py-10 sticky w-[90vw] sm:w-[60vw] mx-auto text-pinkbeige bg-buttongreenshadow rounded-[30px]'>
                 <div className="flex flex-col items-center">  {/* main contact flex-box */}
                     <div className="text-3xl md:text-4xl">  {/* contact title */}
-                        <em className="text-greydef">/Home/</em>Contact
+                        <em className="text-greydef">/Home/</em>#Contact
                     </div>
                     <div className="flex flex-col sm:flex-row mt-5 px-8">  {/* Text and form side-by-side */}
                         <div className="sm:px-8">  {/* Text */}

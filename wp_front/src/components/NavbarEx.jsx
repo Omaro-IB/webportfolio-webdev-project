@@ -24,28 +24,28 @@ const NavbarEx = () => {
                     <img src={logo} alt="logo" style={{cursor: "pointer", width:"10%"}}/>
                 </Link>
             </div>
-            {/* menu */}
+            {/* sticky menu */}
             <ul className='hidden md:flex'>
                 <li>
-                    <RouterLink to='/' smooth={true} duration={500} className="group">
+                    <RouterLink to='/home' reloadDocument={true} duration={500} className="group">
                         <RiHome6Line className="fill-pinkbeige" style = {{width: "30px", height: "30px"}}></RiHome6Line>
                         <p className="text-buttongreenhighlight group-hover:text-pinkbeige" style={{fontSize: "15px"}}>Home</p>
                     </RouterLink>
                 </li>
                 <li>
-                    <RouterLink to='/#projects' smooth={true} duration={500} className="group">
+                    <RouterLink to='/home/#projects' reloadDocument={true} duration={500} className="group">
                         <MdGridView className="ml-3 fill-pinkbeige" style = {{width: "30px", height: "30px"}}></MdGridView>
                         <p className="text-buttongreenhighlight group-hover:text-pinkbeige" style={{fontSize: "15px"}}>Projects</p>
                     </RouterLink>
                 </li>
                 <li>
-                    <RouterLink to='/#contact' smooth={true} duration={500} className="group">
+                    <RouterLink to='/home/#contact' reloadDocument={true} duration={500} className="group">
                         <MdOutlineContactPage className="ml-2 fill-pinkbeige" style = {{width: "30px", height: "30px"}}></MdOutlineContactPage>
                         <p className="text-buttongreenhighlight group-hover:text-pinkbeige" style={{fontSize: "15px"}}>Contact</p>
                     </RouterLink>
                 </li>
                 <li>
-                    <RouterLink to='/blogs' smooth={true} duration={500} className="group">
+                    <RouterLink to='/blogs' reloadDocument={true} duration={500} className="group">
                         <FiBook className="stroke-pinkbeige" style = {{width: "30px", height: "30px"}}></FiBook>
                         <p className="text-buttongreenhighlight group-hover:text-pinkbeige" style={{fontSize: "15px"}}>Blogs</p>
                     </RouterLink>
@@ -55,7 +55,7 @@ const NavbarEx = () => {
             <div onClick={handleClick} className='md:hidden z-10 stroke-pinkbeige'>
                 {!nav ? <FaBars className="fill-pinkbeige" /> : <FaTimes />}
             </div>
-            {/* Mobile menu */}
+            {/* Hidden menu */}
             <ul
                 className={
                     !nav
@@ -64,25 +64,25 @@ const NavbarEx = () => {
                 }
             >
                 <li className='py-6 text-4xl'>
-                    <RouterLink to='/'>
+                    <RouterLink to='/home' reloadDocument={true}>
                         <p className="text-pinkbeige"> Home </p>
                     </RouterLink>
                 </li>
                 <li className='py-6 text-4xl'>
                     {' '}
-                    <RouterLink to='/#projects'>
+                    <RouterLink to='/home/#projects' reloadDocument={true}>
                         <p className="text-pinkbeige"> Projects </p>
                     </RouterLink>
                 </li>
                 <li className='py-6 text-4xl'>
                     {' '}
-                    <RouterLink to='/#contact'>
+                    <RouterLink to='/home/#contact' reloadDocument={true}>
                         <p className="text-pinkbeige"> Contact </p>
                     </RouterLink>
                 </li>
                 <li className='py-6 text-4xl'>
                     {' '}
-                    <RouterLink to='/blogs'>
+                    <RouterLink to='/blogs' reloadDocument={true}>
                         <p className="text-pinkbeige"> Blogs </p>
                     </RouterLink>
                 </li>

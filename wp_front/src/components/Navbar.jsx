@@ -24,7 +24,7 @@ const Navbar = () => {
                     <img src={logo} alt="logo" style={{cursor: "pointer", width:"10%"}}/>
                 </Link>
             </div>
-            {/* menu */}
+            {/* sticky menu */}
             <ul className='hidden md:flex'>
                 <li>
                     <Link to='home' smooth={true} duration={500} className="group">
@@ -45,7 +45,7 @@ const Navbar = () => {
                     </Link>
                 </li>
                 <li>
-                    <RouterLink to='/blogs' smooth={true} duration={500} className="group">
+                    <RouterLink to='/blogs' reloadDocument={true} duration={500} className="group">
                         <FiBook className="stroke-pinkbeige" style = {{width: "30px", height: "30px"}}></FiBook>
                         <p className="text-buttongreenhighlight group-hover:text-pinkbeige" style={{fontSize: "15px"}}>Blogs</p>
                     </RouterLink>
@@ -55,7 +55,7 @@ const Navbar = () => {
             <div onClick={handleClick} className='md:hidden z-10'>
                 {!nav ? <FaBars className="fill-pinkbeige" /> : <FaTimes />}
             </div>
-            {/* Mobile menu */}
+            {/* Hidden menu */}
             <ul
                 className={
                     !nav
@@ -82,7 +82,7 @@ const Navbar = () => {
                 </li>
                 <li className='py-6 text-4xl'>
                     {' '}
-                    <RouterLink to="/blogs">
+                    <RouterLink to="/blogs" reloadDocument={true}>
                         <p className="text-pinkbeige"> Blogs </p>
                     </RouterLink>
                 </li>
