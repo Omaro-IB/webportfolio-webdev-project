@@ -36,7 +36,7 @@ const ContactForm = () => {
 
             <div className="text-pinkbeige">
 
-                <div className="text-2xl">Thank you!</div>
+                <div className="text-2xl">Thank you! ☺</div>
 
                 <div className="text-md">I'll get back to you as soon as I can.</div>
 
@@ -59,7 +59,7 @@ const ContactForm = () => {
 
         >
 
-            <div style={{fontFamily: 'GTPressuraMono-Light'}} className="pt-0 mb-3">
+            <div style={{fontFamily: 'GTPressuraMono-Light', color: "black"}} className="pt-0 mb-3">
 
                 <input
 
@@ -77,7 +77,7 @@ const ContactForm = () => {
 
             </div>
 
-            <div style={{fontFamily: 'GTPressuraMono-Light'}} className="pt-0 mb-3">
+            <div style={{fontFamily: 'GTPressuraMono-Light', color: "black"}} className="pt-0 mb-3">
 
                 <input
 
@@ -95,7 +95,7 @@ const ContactForm = () => {
 
             </div>
 
-            <div style={{fontFamily: 'GTPressuraMono-Light'}} className="pt-0 mb-3">
+            <div style={{fontFamily: 'GTPressuraMono-Light', color: "black"}} className="pt-0 mb-3">
 
         <textarea
 
