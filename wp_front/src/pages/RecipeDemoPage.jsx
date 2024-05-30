@@ -6,7 +6,10 @@ function RecipeDemoPage() {
   return (
       <div>
           <NavbarEx />
-          <p style={{fontFamily: 'GTPressuraMono'}}> Under construction... </p>
+          <div className="h-[11vh]"></div>
+          <div className="m-10">
+            <p style={{fontFamily: 'GTPressuraMono'}} > Under construction... </p>
+          </div>
       </div>
   );
 }
