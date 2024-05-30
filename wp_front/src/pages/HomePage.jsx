@@ -1,7 +1,10 @@
 import '../App.css';
-import HomePageMobile from "./HomePageMobile";
-import HomePageDesktop from "./HomePageDesktop";
 import React, { useState, useEffect } from 'react';
+import Navbar from "../components/Navbar.jsx";
+import HomeDesktop from "../components/HomeDesktop.jsx";
+import Projects from "../components/Projects.jsx";
+import Contact from "../components/Contact.jsx";
+import HomeMobile from "../components/HomeMobile.jsx";
 
 function HomePage() {
     const [matches, setMatches] = useState(
@@ -14,9 +17,24 @@ function HomePage() {
     }, []);
 
     if (matches) {
-        return (<HomePageDesktop />)
+        return (
+            <div>
+                <Navbar> </Navbar>
+                <HomeDesktop> </HomeDesktop>
+                <Projects> </Projects>
+                <Contact> </Contact>
+            </div>
+        )
     } else {
-        return (<HomePageMobile />)
+        return (
+            <div className="flex flex-col">
+                <Navbar> </Navbar>
+                <HomeMobile> </HomeMobile>
+                <Projects> </Projects>
+                <Contact> </Contact>
+            </div>
+        )
     }
 }
+
 export default HomePage;
