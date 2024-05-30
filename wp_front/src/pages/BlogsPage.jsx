@@ -1,7 +1,8 @@
 import '../App.css';
-import BlogsPageDesktop from "./BlogsPageDesktop";
-import BlogsPageMobile from "./BlogsPageMobile";
 import React, { useState, useEffect } from 'react';
+import NavbarEx from "../components/NavbarEx.jsx";
+import BlogsDesktop from "../components/BlogsDesktop.jsx";
+import BlogsMobile from "../components/BlogsMobile.jsx";
 
 function BlogsPage() {
     const [matches, setMatches] = useState(
@@ -14,9 +15,20 @@ function BlogsPage() {
     }, []);
 
     if (matches) {
-        return (<BlogsPageDesktop />)
+        return (
+            <div>
+                <NavbarEx/>
+                <BlogsDesktop/>
+            </div>
+        )
     } else {
-        return (<BlogsPageMobile />)
+        return (
+            <div>
+                <NavbarEx />
+                <BlogsMobile />
+            </div>
+        )
     }
 }
+
 export default BlogsPage;
