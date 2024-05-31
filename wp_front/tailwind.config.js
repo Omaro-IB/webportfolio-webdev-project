@@ -14,7 +14,7 @@ module.exports = {
       'buttongreenhighlight': '#97c797',
       'buttongreenshadow': '#06130e',
       'beige': '#e9d3bb',
-      'pinkbeige': '#e6e6e6',
+      'pinkbeige': '#ecddd8',
       'whitehighlight': '#f9f1e8',
       'rederror': '#f14e4e',
       'codewhite': '#c5c5c5',

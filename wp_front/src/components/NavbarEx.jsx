@@ -18,7 +18,7 @@ const NavbarEx = () => {
     const handleClick = () => setNav(!nav);
 
     return (
-        <div className='z-50 fixed w-full h-[11vh] flex justify-between items-center px-4 bg-buttongreenshadow border border-b-buttongreenhighlight hover:border-b-pinkbeige text-gray-300'>
+        <div className='z-50 fixed w-full h-[11vh] flex justify-between items-center px-4 bg-buttongreenshadow border hover:border-b-buttongreenhighlight border-b-pinkbeige text-gray-300'>
             <div>
                 <Link onClick={handleClick} to='home' smooth={true} duration={500} >
                     <img src={logo} alt="logo" style={{cursor: "pointer", width:"10%"}}/>
@@ -60,7 +60,7 @@ const NavbarEx = () => {
                 className={
                     !nav
                         ? 'hidden'
-                        : 'absolute top-0 left-0 w-full h-screen bg-[#0b0f02] flex flex-col justify-center items-center'
+                        : 'absolute top-0 left-0 w-full h-screen bg-blackshadow flex flex-col justify-center items-center'
                 }
             >
                 <li className='py-6 text-4xl'>

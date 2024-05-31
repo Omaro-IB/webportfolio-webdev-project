@@ -59,7 +59,7 @@ const ContactForm = () => {
 
         >
 
-            <div style={{fontFamily: 'GTPressuraMono-Light', color: "black"}} className="pt-0 mb-3">
+            <div style={{fontFamily: 'GTPressura', color: "black"}} className="pt-0 mb-3">
 
                 <input
 
@@ -69,7 +69,7 @@ const ContactForm = () => {
 
                     name="name"
 
-                    className="focus:outline-none focus:ring relative w-full px-3 py-3 text-sm text-gray-600 placeholder-gray-400 bg-white border-0 rounded shadow outline-none"
+                    className="focus:outline-none focus:ring relative w-full px-3 py-3 text-sm text-gray-600 placeholder-gray-400 bg-pinkbeige border-0 rounded shadow outline-none"
 
                     required
 
@@ -77,7 +77,7 @@ const ContactForm = () => {
 
             </div>
 
-            <div style={{fontFamily: 'GTPressuraMono-Light', color: "black"}} className="pt-0 mb-3">
+            <div style={{fontFamily: 'GTPressura', color: "black"}} className="pt-0 mb-3">
 
                 <input
 
@@ -87,7 +87,7 @@ const ContactForm = () => {
 
                     name="email"
 
-                    className="focus:outline-none focus:ring relative w-full px-3 py-3 text-sm text-gray-600 placeholder-gray-400 bg-white border-0 rounded shadow outline-none"
+                    className="focus:outline-none focus:ring relative w-full px-3 py-3 text-sm text-gray-600 placeholder-gray-400 bg-pinkbeige border-0 rounded shadow outline-none"
 
                     required
 
@@ -95,7 +95,7 @@ const ContactForm = () => {
 
             </div>
 
-            <div style={{fontFamily: 'GTPressuraMono-Light', color: "black"}} className="pt-0 mb-3">
+            <div style={{fontFamily: 'GTPressura', color: "black"}} className="pt-0 mb-3">
 
         <textarea
 
@@ -103,7 +103,7 @@ const ContactForm = () => {
 
             name="message"
 
-            className="focus:outline-none focus:ring relative w-full px-3 py-3 text-sm text-gray-600 placeholder-gray-400 bg-white border-0 rounded shadow outline-none"
+            className="focus:outline-none focus:ring relative w-full px-3 py-3 text-sm text-gray-600 placeholder-gray-400 bg-pinkbeige border-0 rounded shadow outline-none"
 
             required
 
@@ -115,13 +115,13 @@ const ContactForm = () => {
 
                 <button
 
-                    className="stroke-pinkbeige active:bg-blue-600 hover:shadow-lg focus:outline-none px-6 py-3 mb-1 mr-1 text-sm font-bold text-white uppercase transition-all duration-150 ease-linear rounded shadow outline-none"
+                    className="text-pinkbeige bg-buttongreen active:bg-buttongreenhighlight px-6 py-3 mb-1 mr-1 text-sm font-bold text-pinkbeige transition-all duration-150 ease-linear rounded"
 
                     type="submit"
 
                 >
 
-                    <p className="text-pinkbeige">Submit</p>
+                    <p>Submit</p>
 
                 </button>
 

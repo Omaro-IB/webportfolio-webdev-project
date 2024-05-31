@@ -60,11 +60,11 @@ const HomeMobile = () => {
                     <div className="max-w-fit mt-10"> {/* buttons */}
                         <div className="grid grid-cols-2">
                             <Link to="contact" smooth duration={500} style={{width: "110px", height: "40px"}}
-                                  className="px-4 py-1 duration-500 shadow-box hover:shadow-none group border-solid border-2 border-black text-white bg-gradient-to-r from-[#0b5036] to-[#176648] cursor-pointer">
+                                  className="px-4 py-1 duration-500 shadow-box hover:shadow-none group border-solid border-2 border-black text-white bg-gradient-to-r from-buttongreen to-buttongreengradient cursor-pointer">
                                 Contact Me
                             </Link>
                             <RouterLink to="/blogs" smooth duration={500} style={{width: "110px", height: "40px"}}
-                                        className="ml-2 px-4 py-1 duration-500 shadow-box hover:shadow-none group border-solid border-2 border-black text-white bg-gradient-to-r from-[#0b5036] to-[#176648] cursor-pointer">
+                                        className="ml-2 px-4 py-1 duration-500 shadow-box hover:shadow-none group border-solid border-2 border-black text-white bg-gradient-to-r from-buttongreen to-buttongreengradient cursor-pointer">
                                 Read More
                             </RouterLink>
                         </div>

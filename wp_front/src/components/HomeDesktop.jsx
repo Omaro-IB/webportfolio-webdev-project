@@ -38,12 +38,12 @@ const HomeDesktop = () => {
                             <img alt="profile" src={me} className="w-[11vw] h-[11vw] mx-auto"></img>
                             <TyperBig classname="mx-auto"> </TyperBig>
                             <hr className="w-40 border-2 border-whitehighlight hover:border-buttongreenhighlight duration-500 mx-auto mb-3"></hr>
-                            <p className="text-[20px] text-[#e6e6e6] mx-auto">Data Science, Network Engineering,
+                            <p className="text-[20px] text-pinkbeige mx-auto">Data Science, Network Engineering,
                                 Web Dev</p>
                         </div>
                     </div>
                     <div className="self-end m-10" style={{gridColumn: 1, gridRow: 1}}>
-                        <p className="text-[40px] text-[#e6e6e6]">/home</p>
+                        <p className="text-[40px] text-pinkbeige">/home</p>
                     </div>
                 </div>
                 <div className="mt-10 bg-beige w-full max-h-[89vh] overflow-auto"> {/* info div */}
@@ -61,10 +61,10 @@ const HomeDesktop = () => {
                             further details at <u><a className="text-buttongreen hover:text-buttongreenhighlight" href={Scramble('lc158d7dlcxdlb12xc34lc15b6dl')}>{Scramble('dlcxdlb12xc34lc15b6dl')}.</a></u>
                         </p>
                         <div className="flex flex-row mt-[4vh]"> {/* buttons div */}
-                            <Link to="contact" smooth duration={500} className="px-4 py-2 duration-500 shadow-box hover:shadow-none group border-solid border-2 border-black text-white bg-gradient-to-r from-[#0b5036] to-[#176648] cursor-pointer">
+                            <Link to="contact" smooth duration={500} className="px-4 py-2 duration-500 shadow-box hover:shadow-none group border-solid border-2 border-black text-white bg-gradient-to-r from-buttongreen to-buttongreengradient cursor-pointer">
                                 Contact Me
                             </Link>
-                            <RouterLink to="/blogs" className="px-4 py-2 ml-4 self-start duration-500 shadow-box hover:shadow-none group border-solid border-2 border-black text-white bg-gradient-to-r from-[#0b5036] to-[#176648] cursor-pointer">
+                            <RouterLink to="/blogs" className="px-4 py-2 ml-4 self-start duration-500 shadow-box hover:shadow-none group border-solid border-2 border-black text-white bg-gradient-to-r from-buttongreen to-buttongreengradient cursor-pointer">
                                 Read More
                             </RouterLink>
                         </div>

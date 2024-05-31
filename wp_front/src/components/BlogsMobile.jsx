@@ -6,17 +6,17 @@ import Blogs from "./Blogs";
 
 const BlogsMobile = () => {
     return (
-        <div name="blos" id = "blogs" className="bg-[#0b0f02]">
-            <div className="bg-[#0b0f02] h-screen">
+        <div name="blos" id = "blogs" className="bg-blackshadow">
+            <div className="bg-blackshadow h-screen">
                 <div className="py-20">
                     <div className="absolute z-20 ml-[12vw] mt-[140vw] text-center">
-                        <p className="mt-2 text-[50px] text-[#e6e6e6] mx-auto">/blogs</p>
+                        <p className="mt-2 text-[50px] text-pinkbeige mx-auto">/blogs</p>
                     </div>
                     <img src={hero} alt="hero" className="absolute z-0"></img>
                 </div>
             </div>
-            <div className="bg-[#e9d3bb] h-screen">  {/* content div */}
-                <div className="bg-[#e9d3bb] py-20"> {/* info div */}
+            <div className="bg-beige h-screen">  {/* content div */}
+                <div className="bg-beige py-20"> {/* info div */}
                     <Blogs />
                 </div>
             </div>
