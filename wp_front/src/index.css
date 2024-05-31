@@ -3,25 +3,7 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'CooperBlack';
-  font-style: normal;
-  font-weight: 400;
-  src: local(''),
-  url('/assets/fonts/CooperBlackStd.woff2') format('woff2'),
-  url('/assets/fonts/CooperBlackStd.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'CooperBlack';
-  font-style: italic;
-  font-weight: 400;
-  src: local(''),
-  url('/assets/fonts/CooperBlackStd-Italic.woff2') format('woff2'),
-  url('/assets/fonts/CooperBlackStd-Italic.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'GTPressuraMono-Light';
+  font-family: 'GTPressuraMonoLight';
   font-style: normal;
   font-weight: 400;
   src: local(''),
@@ -39,6 +21,38 @@
 }
 
 @font-face {
+  font-family: 'GTPressuraMono';
+  font-style: oblique;
+  font-weight: 400;
+  src: local(''),
+  url('/assets/fonts/GTPressuraMono-Bold.woff') format('woff'),
+}
+
+@font-face {
+  font-family: 'GTPressura';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+  url('/assets/fonts/GTPressuraStandard.woff2') format('woff2'),
+}
+
+@font-face {
+  font-family: 'GTPressuraLight';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+  url('/assets/fonts/GTPressuraStandard-Light.woff2') format('woff2'),
+}
+
+@font-face {
+  font-family: 'GTPressuraMedium';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+  url('/assets/fonts/GTPressuraStandard-Medium.woff2') format('woff2'),
+}
+
+@font-face {
   font-family: 'Plaak';
   font-style: normal;
   font-weight: 400;
@@ -48,44 +62,12 @@
 }
 
 @font-face {
-  font-family: 'Plaak';
-  font-style: oblique;
+  font-family: 'PlaakCondensed';
+  font-style: normal;
   font-weight: 400;
   src: local(''),
   url('/assets/fonts/Plaak-CondensedBold.woff2') format('woff2'),
   url('/assets/fonts/Plaak-CondensedBold.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Verdana';
-  font-style: normal;
-  font-weight: 400;
-  src: local(''),
-  url('/assets/fonts/Verdana.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Verdana';
-  font-style: oblique;
-  font-weight: 400;
-  src: local(''),
-  url('/assets/fonts/Verdana-Bold.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Verdana';
-  font-style: italic;
-  font-weight: 400;
-  src: local(''),
-  url('/assets/fonts/Verdana-Italic.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Verdana';
-  font-style: oblique 23deg;
-  font-weight: 400;
-  src: local(''),
-  url('/assets/fonts/Verdana-BoldItalic.woff') format('woff');
 }
 
 @font-face {

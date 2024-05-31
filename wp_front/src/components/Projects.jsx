@@ -34,20 +34,16 @@ const ProjectBox = ({title, description, image, project}) => {
 const Projects = () => {
     return (
         <div id='projects' className='bg-beige py-[10vh] flex flex-col'> {/* Project div */}
-            <div className='flex items-center flex-col'>   {/* Title div */}
-                <p className='text-3xl sm:text-4xl font-bold inline border-b-4 text-[#000000] border-greydef]'>
+            <div className='flex flex-col'>   {/* Title div */}
+                <p className='self-center text-3xl sm:text-4xl font-bold inline border-b-4 text-[#000000] border-greydef]'>
                     <em className="text-greydef">/Home/</em>#Projects
                 </p>
-                <div className="flex">
-                    <p className='py-6 text-base sm:text-2xl'>Check out some of my work &nbsp;- &nbsp;</p> {/* TODO */}
-                    <p className="py-6 text-base sm:text-2xl text-[#f14e4e]"> Still under construction... </p>
+                <div style={{fontFamily:"GTPressuraMono"}} className="self-center flex mb-7">
+                    <p className='text-center text-base sm:text-2xl'>Check out some of my work - <span className="text-rederror">still under construction</span></p> {/* TODO */}
                 </div>
             </div>
             <div className="grid grid-cols-1 gap-1 sm:grid-cols-3 self-center sm:p-0 p-4">  {/* Project boxes div */}
                 <ProjectBox title = "Recipe Sanitizer" description="A small project dedicated to cleanly formatting and downloading online recipes" image={proj1} project="minimalrecipe-scripting-tool"/>
-                <ProjectBox title = "..." description="..." image={proj0} project=""/>
-                <ProjectBox title = "..." description="..." image={proj0} project=""/>
-                <ProjectBox title = "..." description="..." image={proj0} project=""/>
                 <ProjectBox title = "..." description="..." image={proj0} project=""/>
                 <ProjectBox title = "..." description="..." image={proj0} project=""/>
             </div>

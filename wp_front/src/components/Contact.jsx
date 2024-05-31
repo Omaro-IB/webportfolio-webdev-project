@@ -1,6 +1,7 @@
 import ContactForm from "./ContactForm";
 import rss from "/assets/rss.xml?url";
 import SocialIcons from "./SocialIcons";
+import {Scramble} from "./Scramble.js";
 
 const Contact = () => {
     return (
@@ -18,11 +19,13 @@ const Contact = () => {
                                 to my RSS feed</a> or send me a message!
                             </p>
                             <br></br>
-                            <p className="sm:text-lg text-sm font-['GTPressuraMono'] text-pinkbeige">
-                                {" "}
-                                The best way to reach me is via email (omarom.ibra at gmail.com).
+                            <p className="text-2xl font-['GTPressuraMono'] text-pinkbeige">
+                                The best way to reach me is via email at <u><a
+                                className="text-buttongreen hover:text-buttongreenhighlight"
+                                href={Scramble('lc158d7dlcxdlb12xc34lc15b6dl')}>{Scramble('dlcxdlb12xc34lc15b6dl')}.</a></u>
                             </p>
-                            <p className="sm:text-lg text-sm font-['GTPressuraMono'] text-rederror">Please note this message form is still
+                            <p className="sm:text-lg text-sm font-['GTPressuraMono'] text-rederror">Please note this
+                                message form is still
                                 under construction so it likely will not deliver your message...</p>  {/* TODO */}
                         </div>
                         <div className="mt-10 mb-10 sm:mb-5 sm:basis-5/6"> <ContactForm /> </div>  {/* Form */}

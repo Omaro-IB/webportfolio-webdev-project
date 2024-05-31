@@ -4,6 +4,7 @@ import {HiOutlineMail} from "react-icons/hi";
 import resume from "/assets/resume.pdf";
 import rss from "/assets/rss.xml?url";
 import React from "react";
+import {Scramble} from "./Scramble.js";
 
 const SocialIcons = () => {
     return (
@@ -21,7 +22,7 @@ const SocialIcons = () => {
                    className="mx-1 h-6 w-6 duration-500 shadow-box2 hover:shadow-none group border-solid border-2 border-black cursor-pointer">
                     <FaGithub style={{width: "20px", height: "20px"}}/>
                 </a>
-                <a href="mailto:omarom.ibra@gmail.com"
+                <a href={Scramble('lc158d7dlcxdlb12xc34lc15b6dl')}
                    className="mx-1 h-6 w-6 duration-500 shadow-box2 hover:shadow-none group border-solid border-2 border-black cursor-pointer">
                     <HiOutlineMail style={{width: "20px", height: "20px"}}/>
                 </a>
