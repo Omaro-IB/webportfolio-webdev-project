@@ -6,7 +6,6 @@ import { Link as RouterLink} from "react-router-dom";
 import '../App.css';
 import { TypeAnimation } from 'react-type-animation';
 import SocialIcons from "./SocialIcons.jsx";
-import {Scramble} from "./Scramble.js";
 
 
 
@@ -26,7 +25,7 @@ const TyperBig = () => {
     );
 };
 
-const HomeDesktop = () => {
+const HomeDesktop = ({subtitle, p1_text, p2_text}) => {
     return (
         <div id = "home" className="z-0 w-full bg-beige">
             <div className="h-[11vh]"></div>
@@ -38,8 +37,7 @@ const HomeDesktop = () => {
                             <img alt="profile" src={me} className="w-[11vw] h-[11vw] mx-auto"></img>
                             <TyperBig classname="mx-auto"> </TyperBig>
                             <hr className="w-40 border-2 border-whitehighlight hover:border-buttongreenhighlight duration-500 mx-auto mb-3"></hr>
-                            <p className="text-[20px] text-pinkbeige mx-auto">Data Science, Network Engineering,
-                                Web Dev</p>
+                            <p className="text-[20px] text-pinkbeige mx-auto">{subtitle}</p>
                         </div>
                     </div>
                     <div className="self-end m-10" style={{gridColumn: 1, gridRow: 1}}>
@@ -51,14 +49,9 @@ const HomeDesktop = () => {
                         <h1 style={{fontFamily:"PlaakCondensed"}} className="text-8xl mb-[3vh]">Welcome!</h1>
                         <br></br>
                         <p style={{fontFamily:"GTPressuraMonoLight"}}> {/* big paragraph */}
-                            I’m a data scientist with a focus on machine learning, computational mathematics, and also like
-                            network engineering too. Currently pursuing my bachelor's degree, and am eager to embark on an
-                            internship opportunity.
+                            {p1_text}
                             <br></br><br></br>
-                            Are you looking for someone driven and capable? Someone with an analytic and mathematical
-                            mindset? Or maybe you need someone with a comprehensive understanding of the theory and
-                            practical implementation of machine learning algorithms? If so, feel free to reach out to me for
-                            further details at <u><a className="text-buttongreen hover:text-buttongreenhighlight" href={Scramble('lc158d7dlcxdlb12xc34lc15b6dl')}>{Scramble('dlcxdlb12xc34lc15b6dl')}.</a></u>
+                            {p2_text}
                         </p>
                         <div className="flex flex-row mt-[4vh]"> {/* buttons div */}
                             <Link to="contact" smooth duration={500} className="px-4 py-2 duration-500 shadow-box hover:shadow-none group border-solid border-2 border-black text-white bg-gradient-to-r from-buttongreen to-buttongreengradient cursor-pointer">

@@ -6,7 +6,6 @@ import { Link as RouterLink} from "react-router-dom";
 import '../App.css';
 import { TypeAnimation } from 'react-type-animation';
 import SocialIcons from "./SocialIcons.jsx";
-import {Scramble} from "./Scramble.js";
 
 
 const TyperSmall = () => {
@@ -26,7 +25,7 @@ const TyperSmall = () => {
 };
 
 
-const HomeMobile = () => {
+const HomeMobile = ({subtitle, p1_text, p2_text}) => {
     return (
         <div id="home" className="bg-beige flex flex-col">
             <div className="h-[11vh]"></div>
@@ -36,8 +35,7 @@ const HomeMobile = () => {
                     <img src={me} alt="profile" className="w-[150px] h-[150px] mx-auto"></img>
                     <TyperSmall/>
                     <hr className="w-32 border-2 border-whitehighlight hover:border-buttongreen duration-500 mx-auto"></hr>
-                    <p className="text-[17px] text-pinkbeige mx-auto mt-3">Data Science, Network Engineering, Web
-                        Dev</p>
+                    <p className="text-[17px] text-pinkbeige mx-auto mt-3">{subtitle}</p>
                 </div>
                 <div className="self-end mx-auto" style={{gridColumn: 1, gridRow: 1}}>
                     <p className="text-[40px] text-pinkbeige mb-6">/home</p>
@@ -48,15 +46,9 @@ const HomeMobile = () => {
                 <br></br>
                 <p style={{fontFamily: "GTPressuraMonoLight"}}
                    className="self-start max-w-[75vw] text-gray-900 text-[15px]">
-                    I’m a data scientist with a focus on machine learning, computational mathematics, and also like
-                    network engineering too. Currently pursuing my bachelor's degree, and am eager to embark on an
-                    internship opportunity.
+                    {p1_text}
                     <br></br><br></br>
-                    Are you looking for someone driven and capable? Someone with an analytic and mathematical
-                    mindset? Or maybe you need someone with a comprehensive understanding of the theory and
-                    practical implementation of machine learning algorithms? If so, feel free to reach out to me for
-                    further details at <u><a className="text-buttongreen hover:text-buttongreenhighlight"
-                                             href={Scramble('lc158d7dlcxdlb12xc34lc15b6dl')}>{Scramble('dlcxdlb12xc34lc15b6dl')}.</a></u>
+                    {p2_text}
                 </p>
                 <div className="max-w-fit mt-10"> {/* buttons */}
                     <div className="grid grid-cols-2">
