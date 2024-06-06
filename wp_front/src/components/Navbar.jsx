@@ -79,6 +79,7 @@ const Navbar = ({callingPage}) => {
             </div>
         </div>),
     ]
+    if (callingPage === "about") {hamburgerChildren[4] = <p className="text-pinkbeige py-6 text-4xl">About</p>}
 
     // Exts: Internal or External Link?; Links: Link to Page
     let exts =[true, true, true, true, true]; let links = ['/home', '/home/#projects', '/home/#contact', '/blogs', '/about']
