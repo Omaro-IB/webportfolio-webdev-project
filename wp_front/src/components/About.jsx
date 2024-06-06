@@ -2,7 +2,7 @@ import '../App.css';
 
 const About = () => {
     return (
-        <div>
+        <div className="bg-beige h-screen">
             hi
         </div>
     );
