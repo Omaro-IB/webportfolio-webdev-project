@@ -23,7 +23,7 @@ function HomePage() {
     if (matches) {
         return (
             <div>
-                <Navbar> </Navbar>
+                <   Navbar callingPage="home"> </Navbar>
                 <HomeDesktop subtitle={subtitle} p1_text={p1_text} p2_text={p2_text}> </HomeDesktop>
                 <Projects> </Projects>
                 <Contact> </Contact>
@@ -32,7 +32,7 @@ function HomePage() {
     } else {
         return (
             <div className="flex flex-col">
-                <Navbar> </Navbar>
+                <Navbar callingPage="home"> </Navbar>
                 <HomeMobile subtitle={subtitle} p1_text={p1_text} p2_text={p2_text}> </HomeMobile>
                 <Projects> </Projects>
                 <Contact> </Contact>

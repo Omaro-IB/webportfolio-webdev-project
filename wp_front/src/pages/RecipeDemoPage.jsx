@@ -1,11 +1,11 @@
 import '../App.css';
-import NavbarEx from "../components/NavbarEx";
+import Navbar from "../components/Navbar";
 
 
 function RecipeDemoPage() {
   return (
       <div>
-          <NavbarEx />
+          <Navbar callingPage="recipedemo"></Navbar>
           <div className="h-[11vh]"></div>
           <div className="m-10">
             <p style={{fontFamily: 'GTPressuraMono'}} > Under construction... </p>

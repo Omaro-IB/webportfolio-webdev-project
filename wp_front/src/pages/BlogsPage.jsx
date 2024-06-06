@@ -1,6 +1,6 @@
 import '../App.css';
 import React, { useState, useEffect } from 'react';
-import NavbarEx from "../components/NavbarEx.jsx";
+import Navbar from "../components/Navbar.jsx";
 import BlogsDesktop from "../components/BlogsDesktop.jsx";
 import BlogsMobile from "../components/BlogsMobile.jsx";
 
@@ -17,14 +17,14 @@ function BlogsPage() {
     if (matches) {
         return (
             <div>
-                <NavbarEx/>
+                <Navbar callingPage="blogs"></Navbar>
                 <BlogsDesktop/>
             </div>
         )
     } else {
         return (
             <div>
-                <NavbarEx />
+                <Navbar callingPage="blogs"></Navbar>
                 <BlogsMobile />
             </div>
         )

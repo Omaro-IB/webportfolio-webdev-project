@@ -1,5 +1,5 @@
 import '../App.css';
-import NavbarEx from "../components/NavbarEx";
+import Navbar from "../components/Navbar";
 import Image from "/assets/temp.png"
 import { PiMediumLogoFill } from "react-icons/pi";
 import {FaLinkedin} from 'react-icons/fa';
@@ -8,7 +8,7 @@ import {FaLinkedin} from 'react-icons/fa';
 function Blog20240128() {
   return (
       <div className="bg-beige h-full w-screen flex flex-row">
-        <NavbarEx />
+        <Navbar callingPage="blogs" />
           <br></br>
           <div className="origin-center mx-auto flex flex-col mt-[15vh] w-[90vw] sm:w-[50vw]">
               {/* TODO: Update title and date */}
