@@ -66,6 +66,8 @@ const Navbar = ({callingPage}) => {
     let exts; let links;
     if (callingPage === "home") {exts = [false, false, false, true, true]; links = ['home', 'projects', 'contact', '/blogs', '/about']}
     else {exts =[true, true, true, true, true]; links = ['/home', '/home/#projects', '/home/#contact', '/blogs', '/about']}
+    if (callingPage === "blogs") {exts[3] = false}
+    if (callingPage === "about") {exts[4] = false}
 
     // Data: Central source of truth for rendering navbar items ***
     const data = [
@@ -90,7 +92,7 @@ const Navbar = ({callingPage}) => {
             </div>
             {/* Hidden Menu */}
             <ul className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-blackshadow flex flex-col justify-center items-center'}>
-                {data.map((d) => <li><NavbarHamburgerItem text={d.text} ext={d.ext} link={d.link}></NavbarHamburgerItem></li>)}
+                {data.map((d) => <li><NavbarHamburgerItem text={d.text} ext={d.ext} link={d.link} onClickFunc={handleClick}></NavbarHamburgerItem></li>)}
             </ul>
             {/* Social Icons TODO */}
 
