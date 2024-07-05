@@ -1,3 +1,8 @@
+# Backend
+wp_back
+/wp_back/
+wp_back/*
+
 # Logs
 logs
 *.log
@@ -26,6 +31,8 @@ dist-ssr
 *.sw?
 *.old
 
-# Packages
+# Packages and configs and stuff
 package.json
 package-lock.json
+.eslintrc.cjs
+vite.config.js

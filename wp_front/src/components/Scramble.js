@@ -18,6 +18,3 @@ export function Scramble(text) {
     for (let i = 0; i < text.length; i++) {newString += mapper[text[i]]}
     return newString
 }
-
-console.log(Scramble('lc158d7dlcxdlb12xc34lc15b6dl'))
-console.log(Scramble('dlcxdlb12xc34lc15b6dl'))

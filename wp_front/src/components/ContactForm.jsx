@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-const FORM_ENDPOINT = "https://herotofu.com/start"; // TODO - update to the correct endpoint
+const FORM_ENDPOINT = ""; // TODO - update to the correct endpoint
 
 const ContactForm = () => {
 
