@@ -13,22 +13,18 @@ const Contact = () => {
                     </div>
                     <div className="flex flex-col sm:flex-row mt-5 px-8">  {/* Text and form side-by-side */}
                         <div className="sm:px-8">  {/* Text */}
-                            <p className="text-2xl font-['GTPressuraMono'] font-bold text-pinkbeige">
+                            <p className="text-2xl font-['GTPressuraMono'] font-bold text-pinkbeige text-center">
                                 If you're interested in what I do, <a
                                 className="underline text-buttongreen hover:text-buttongreenhighlight" href={rss}>subscribe
                                 to my RSS feed</a> or send me a message!
                             </p>
                             <br></br>
-                            <p className="text-2xl font-['GTPressuraMono'] text-pinkbeige">
+                            <p className="text-2xl font-['GTPressuraMono'] text-pinkbeige text-center">
                                 The best way to reach me is via email at <u><a
                                 className="text-buttongreen hover:text-buttongreenhighlight"
                                 href={Scramble('lc158d7dlcxdlb12xc34lc15b6dl')}>{Scramble('dlcxdlb12xc34lc15b6dl')}.</a></u>
                             </p>
-                            <p className="sm:text-lg text-sm font-['GTPressuraMono'] text-rederror">Please note this
-                                message form is still
-                                under construction so it likely will not deliver your message...</p>  {/* TODO */}
                         </div>
-                        <div className="mt-10 mb-10 sm:mb-5 sm:basis-5/6"> <ContactForm /> </div>  {/* Form */}
                     </div>
                     <SocialIcons />
                 </div>

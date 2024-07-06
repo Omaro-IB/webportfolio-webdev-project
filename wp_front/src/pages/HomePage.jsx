@@ -5,10 +5,11 @@ import HomeDesktop from "../components/HomeDesktop.jsx";
 import Projects from "../components/Projects.jsx";
 import Contact from "../components/Contact.jsx";
 import HomeMobile from "../components/HomeMobile.jsx";
+import data from "../data.json"
 
-const p1_text = "I’m a data scientist with a focus on machine learning, computational mathematics, and also like network engineering too. Currently pursuing my bachelor's degree, and am eager to embark on an internship opportunity."
-const p2_text = "Are you looking for someone driven and capable? Someone with an analytic and mathematical mindset? Or maybe you need someone with a comprehensive understanding of the theory and practical implementation of machine learning algorithms? If so, feel free to reach out to me for further details at the contact form below (or just via email)."
-const subtitle = "Data Science, Network Engineering, Web Dev"
+const p1_text = data.text.home_p1
+const p2_text = data.text.home_p2
+const subtitle = data.text.home_sub
 
 function HomePage() {
     const [matches, setMatches] = useState(

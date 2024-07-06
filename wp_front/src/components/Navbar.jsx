@@ -50,13 +50,13 @@ const Navbar = ({callingPage}) => {
             <FiBook className="stroke-pinkbeige" style={{width: "30px", height: "30px"}}></FiBook>
             <p className="text-buttongreenhighlight group-hover:text-pinkbeige" style={{fontSize: "15px"}}>Blogs</p>
         </div>),
-        (<div className="group grid grid-rows-1 grid-cols-1">  {/* about */}
-            <img src={starIconPlain} style={{width: "30px", height: "30px", gridColumn: 1, gridRow: 1}} className="group-hover:invisible" alt={"a sparkling star"}/>
-            <img src={starIcon} style={{width: "30px", height: "30px", gridColumn: 1, gridRow: 1}} className="invisible group-hover:visible" alt={"a sparkling star"}/>
-            <div className="relative invisible group-hover:visible" style={{width: "30px", height: "30px", gridColumn: 1, gridRow: 1}}><Sparkle color={'#97C979'} overflowPx={10} count={2}/></div>
-            <p style={{gridColumn: 1, gridRow: 1}} className="text-popout text-xs relative bottom-3 right-3 invisible group-hover:visible"> interactive!</p>
-            <p className="text-buttongreenhighlight" style={{fontSize: "15px"}}>About</p>
-        </div>),
+        // (<div className="group grid grid-rows-1 grid-cols-1">  {/* about */}
+        //     <img src={starIconPlain} style={{width: "30px", height: "30px", gridColumn: 1, gridRow: 1}} className="group-hover:invisible" alt={"a sparkling star"}/>
+        //     <img src={starIcon} style={{width: "30px", height: "30px", gridColumn: 1, gridRow: 1}} className="invisible group-hover:visible" alt={"a sparkling star"}/>
+        //     <div className="relative invisible group-hover:visible" style={{width: "30px", height: "30px", gridColumn: 1, gridRow: 1}}><Sparkle color={'#97C979'} overflowPx={10} count={2}/></div>
+        //     <p style={{gridColumn: 1, gridRow: 1}} className="text-popout text-xs relative bottom-3 right-3 invisible group-hover:visible"> interactive!</p>
+        //     <p className="text-buttongreenhighlight" style={{fontSize: "15px"}}>About</p>
+        // </div>),  {/* TODO */}
     ]
     if (callingPage === "about") {stickyChildren[4] = ((<div className="group">  {/* blogs */}
         <img src={starIconPlain} style={{width: "30px", height: "30px", gridColumn: 1, gridRow: 1}} alt={"a sparkling star"}/>
@@ -70,20 +70,20 @@ const Navbar = ({callingPage}) => {
         (<p className="text-pinkbeige py-6 text-4xl">Projects</p>),
         (<p className="text-pinkbeige py-6 text-4xl">Contact</p>),
         (<p className="text-pinkbeige py-6 text-4xl">Blogs</p>),
-        (<div className="grid grid-rows-1 grid-cols-1 py-6 mr-7">
-            <p className="text-pinkbeige text-4xl" style={{width: "30px", height: "30px", gridColumn: 1, gridRow: 1}}>About</p>
-            <div className="relative left-20 bottom-5" style={{gridColumn: 1, gridRow: 1}}>
-                <img src={starIcon} alt={"a sparkling star"} style={{width: "30px", height: "30px"}}/>
-                <div className="w-[30px] h-[30px]"><Sparkle color={'#97C979'} overflowPx={10} count={2}/></div>
-                <p className="text-popout text-xs relative bottom-[4.6rem] right-3"> interactive!</p>
-            </div>
-        </div>),
+        // (<div className="grid grid-rows-1 grid-cols-1 py-6 mr-7">
+        //     <p className="text-pinkbeige text-4xl" style={{width: "30px", height: "30px", gridColumn: 1, gridRow: 1}}>About</p>
+        //     <div className="relative left-20 bottom-5" style={{gridColumn: 1, gridRow: 1}}>
+        //         <img src={starIcon} alt={"a sparkling star"} style={{width: "30px", height: "30px"}}/>
+        //         <div className="w-[30px] h-[30px]"><Sparkle color={'#97C979'} overflowPx={10} count={2}/></div>
+        //         <p className="text-popout text-xs relative bottom-[4.6rem] right-3"> interactive!</p>
+        //     </div>
+        // </div>),
     ]
     if (callingPage === "about") {hamburgerChildren[4] = <p className="text-pinkbeige py-6 text-4xl">About</p>}
 
     // Exts: Internal or External Link?; Links: Link to Page
-    let exts =[true, true, true, true, true]; let links = ['/home', '/home/#projects', '/home/#contact', '/blogs', '/about']
-    if (callingPage === "home") {exts = [false, false, false, true, true]; links = ['home', 'projects', 'contact', '/blogs', '/about']}
+    let exts =[true, true, true, true, true]; let links = ['/home', '/home/#projects', '/home/#contact', '/blogs']
+    if (callingPage === "home") {exts = [false, false, false, true, true]; links = ['home', 'projects', 'contact', '/blogs']}
     if (callingPage === "blogs") {exts[3] = false}
     if (callingPage === "about") {exts[4] = false}
     //  ================================== NAVBAR PROPERTIES ==================================

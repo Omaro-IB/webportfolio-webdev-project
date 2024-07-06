@@ -1,13 +1,12 @@
 import React from 'react';
-import proj1 from '/assets/projectboxes/proj1.png';
-import proj0 from '/assets/projectboxes/proj0.png';
+import data from "../data.json"
 
-const ProjectBox = ({title, description, image, project}) => {
-    const github = "https://github.com/Omaro-IB/"+project
-    const demo = "/demos/"+project
+const ProjectBox = ({title, description, project_id, displayDemo}) => {
+    const github = "https://github.com/Omaro-IB/"+project_id
+    const demo = "/demos/"+project_id
 
     return (
-        <div id="projectbox" style={{ backgroundImage: `url(${image})` }} className='group container flex items-center content-div'>
+        <div id="projectbox" style={{ backgroundImage: `url('/assets/projectboxes/${project_id}.png')` }} className='group container flex items-center content-div'>
             {/* Hover Effects */}
             <div className='opacity-0 group-hover:opacity-100 grid grid-rows-3 gap-0 items-center self-center mx-auto'>
                             <span className=' text-lg font-bold text-pinkbeige text-center mx-auto'>
@@ -16,7 +15,7 @@ const ProjectBox = ({title, description, image, project}) => {
                 <p className='text-center text-pinkbeige px-3'>{description}</p>
                 <div className='pt-8 text-center'>
                     <a href={demo}>
-                        <button className='text-center px-4 py-3 m-2 bg-white text-pinkbeige font-bold text-lg'>
+                        <button className={displayDemo? 'text-center px-4 py-3 m-2 bg-white text-pinkbeige font-bold text-lg': "hidden"}>
                             Demo
                         </button>
                     </a>
@@ -39,13 +38,12 @@ const Projects = () => {
                     <em className="text-greydef">/Home/</em>#Projects
                 </p>
                 <div style={{fontFamily:"GTPressuraMono"}} className="self-center flex mb-7">
-                    <p className='text-center text-base sm:text-2xl'>Check out some of my work - <span className="text-rederror">still under construction</span></p> {/* TODO */}
                 </div>
             </div>
             <div className="grid grid-cols-1 gap-1 sm:grid-cols-3 self-center sm:p-0 p-4">  {/* Project boxes div */}
-                <ProjectBox title = "Recipe Sanitizer" description="A small project dedicated to cleanly formatting and downloading online recipes" image={proj1} project="minimalrecipe-scripting-tool"/>
-                <ProjectBox title = "..." description="..." image={proj0} project=""/>
-                <ProjectBox title = "..." description="..." image={proj0} project=""/>
+                {data.projects.map((project) => (
+                    <ProjectBox key={project.id} title={project.title} description={project.description} project_id={project.id}></ProjectBox>
+                ))}
             </div>
         </div>
     );
