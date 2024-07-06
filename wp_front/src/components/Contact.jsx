@@ -11,18 +11,18 @@ const Contact = () => {
                     <div className="text-3xl md:text-4xl">  {/* contact title */}
                         <em className="text-greydef">/Home/</em>#Contact
                     </div>
-                    <div className="flex flex-col sm:flex-row mt-5 px-8">  {/* Text and form side-by-side */}
+                    <div className="flex flex-col sm:flex-row my-5">  {/* Text and form side-by-side */}
                         <div className="sm:px-8">  {/* Text */}
                             <p className="text-2xl font-['GTPressuraMono'] font-bold text-pinkbeige text-center">
                                 If you're interested in what I do, <a
                                 className="underline text-buttongreen hover:text-buttongreenhighlight" href={rss}>subscribe
-                                to my RSS feed</a> or send me a message!
+                                to my RSS feed!</a>
                             </p>
                             <br></br>
                             <p className="text-2xl font-['GTPressuraMono'] text-pinkbeige text-center">
                                 The best way to reach me is via email at <u><a
                                 className="text-buttongreen hover:text-buttongreenhighlight"
-                                href={Scramble('lc158d7dlcxdlb12xc34lc15b6dl')}>{Scramble('dlcxdlb12xc34lc15b6dl')}.</a></u>
+                                href={Scramble('lc158d7dlcxdlb12xc34lc15b6dl')}>{Scramble('dlcxdlb12xc34lc15b6dl')}</a></u>
                             </p>
                         </div>
                     </div>

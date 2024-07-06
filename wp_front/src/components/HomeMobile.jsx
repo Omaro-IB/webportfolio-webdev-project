@@ -54,11 +54,11 @@ const HomeMobile = ({subtitle, p1_text, p2_text}) => {
                     <div className="grid grid-cols-2">
                         <Link to="contact" smooth duration={500} style={{width: "110px", height: "40px"}}
                               className="px-4 py-1 duration-500 shadow-box hover:shadow-none group border-solid border-2 border-black text-white bg-gradient-to-r from-buttongreen to-buttongreengradient cursor-pointer">
-                            Contact Me
+                            <p className={"text-whitehighlight"}>Contact Me</p>
                         </Link>
                         <RouterLink to="/blogs" smooth duration={500} style={{width: "110px", height: "40px"}}
                                     className="ml-2 px-4 py-1 duration-500 shadow-box hover:shadow-none group border-solid border-2 border-black text-white bg-gradient-to-r from-buttongreen to-buttongreengradient cursor-pointer">
-                            Read More
+                            <p className={"text-whitehighlight"}>Read More</p>
                         </RouterLink>
                     </div>
                 </div>
