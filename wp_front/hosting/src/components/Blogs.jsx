@@ -33,12 +33,7 @@ const Blogs = () => {
             </div>
 
             <div className={"sm:mt-[15vh] ml-[2.5vw]"}>
-                {data.blogs.map(item =>
-                    <BlogBox key={item.id} title={item.title} date={item.date} description={item.description} onClick={() => {
-                        setDisplay(true); setTitle(item.title); setDate(item.date); setMedium(item.medium); setLinkedin(item.linkedin);
-                        setImage(item.image); setImage_subtitle(item.image_subtitle); setContent(item.content); window.scrollTo(0, 0)
-                    }} />
-                )}
+                <h1 className={"text-6xl p-20"}>Nothing here yet... please come back later!</h1>
             </div>
         </div>
     );

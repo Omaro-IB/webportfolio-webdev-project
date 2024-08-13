@@ -1,11 +1,12 @@
 import {HiArrowNarrowRight} from 'react-icons/hi';
 import me from '/assets/me.png';
-import hero from '/assets/home-hero-desktop.png'
+import hero from '/assets/home-hero-desktop.jpg'
 import { Link } from "react-scroll";
 import { Link as RouterLink} from "react-router-dom";
 import '../App.css';
 import { TypeAnimation } from 'react-type-animation';
 import SocialIcons from "./SocialIcons.jsx";
+import resume from "/assets/resume.pdf";
 
 
 
@@ -60,6 +61,9 @@ const HomeDesktop = ({subtitle, p1_text, p2_text}) => {
                             <RouterLink to="/blogs" className="px-4 py-2 ml-4 self-start duration-500 shadow-box hover:shadow-none group border-solid border-2 border-black text-white bg-gradient-to-r from-buttongreen to-buttongreengradient cursor-pointer">
                                 <p className={"text-whitehighlight"}>Read More</p>
                             </RouterLink>
+                            <a href={resume} className="px-4 py-2 ml-4 self-start duration-500 shadow-box hover:shadow-none group border-solid border-2 border-black text-white bg-gradient-to-r from-buttongreen to-buttongreengradient cursor-pointer">
+                                <p className={"text-whitehighlight"}>See Resume</p>
+                            </a>
                         </div>
                         <div className="mt-[1.5vh] mb-[1vh]"><SocialIcons /></div>
 

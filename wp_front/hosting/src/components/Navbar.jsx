@@ -5,11 +5,8 @@ import { FiBook } from "react-icons/fi";
 import { MdGridView } from "react-icons/md";
 import { RiHome6Line } from "react-icons/ri";
 import { MdOutlineContactPage } from "react-icons/md";
-import starIcon from "/assets/star.png";
-import starIconPlain from "/assets/star-plain.png";
 import { Link } from 'react-scroll';
 import { Link as RouterLink} from "react-router-dom";
-import Sparkle from 'react-sparkle'
 import SocialIcons from "./SocialIcons.jsx";
 
 
@@ -58,11 +55,6 @@ const Navbar = ({callingPage}) => {
         //     <p className="text-buttongreenhighlight" style={{fontSize: "15px"}}>About</p>
         // </div>),  {/* TODO */}
     ]
-    if (callingPage === "about") {stickyChildren[4] = ((<div className="group">  {/* blogs */}
-        <img src={starIconPlain} style={{width: "30px", height: "30px", gridColumn: 1, gridRow: 1}} alt={"a sparkling star"}/>
-        <p className="text-buttongreenhighlight group-hover:text-pinkbeige" style={{fontSize: "15px"}}>About</p>
-    </div>))
-    }
 
     // All Hamburger Navbar Icons & Styling, Text, Etc.
     const hamburgerChildren = [
@@ -82,10 +74,10 @@ const Navbar = ({callingPage}) => {
     if (callingPage === "about") {hamburgerChildren[4] = <p className="text-pinkbeige py-6 text-4xl">About</p>}
 
     // Exts: Internal or External Link?; Links: Link to Page
-    let exts =[true, true, true, true, true]; let links = ['/home', '/home/#projects', '/home/#contact', '/blogs']
-    if (callingPage === "home") {exts = [false, false, false, true, true]; links = ['home', 'projects', 'contact', '/blogs']}
+    let exts =[true, true, true, true]; let links = ['/home', '/home/#projects', '/home/#contact', '/blogs']
+    if (callingPage === "home") {exts = [false, false, false, true]; links = ['home', 'projects', 'contact', '/blogs']}
     if (callingPage === "blogs") {exts[3] = false}
-    if (callingPage === "about") {exts[4] = false}
+    // if (callingPage === "about") {exts[4] = false}
     //  ================================== NAVBAR PROPERTIES ==================================
 
 
@@ -101,7 +93,7 @@ const Navbar = ({callingPage}) => {
     return (
         <div className='z-50 fixed w-full h-[11vh] flex justify-between items-center px-4 bg-buttongreenshadow border hover:border-b-buttongreenhighlight border-b-pinkbeige text-gray-300'>
             {/* Logo */}
-            <div><Link onClick={handleClick}><img src={logo} alt="logo" className="cursor-pointer w-14"/></Link></div>
+            <div onClick={handleClick}><img src={logo} alt="logo" className="cursor-pointer w-14"/></div>
             {/* Sticky Menu */}
             <ul className='hidden md:flex'>
                 {data.map((d) => <li key={d.link}><NavbarStickyItem ext={d.ext} link={d.link}>{d.stickyChild}</NavbarStickyItem></li>)}

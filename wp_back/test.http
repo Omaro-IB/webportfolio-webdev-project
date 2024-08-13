@@ -1,0 +1,11 @@
+### GET request to backend
+POST https://fsop3.omaribrah.im:4442/submit/
+Content-Type: application/json
+
+{
+  "name": "test",
+  "email": "test@test.com",
+  "message": "hello :)"
+}
+
+###

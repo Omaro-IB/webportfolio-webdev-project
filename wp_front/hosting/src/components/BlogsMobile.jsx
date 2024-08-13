@@ -1,4 +1,4 @@
-import hero from '/assets/blogs-hero-mobile.png'
+import hero from '/assets/blogs-hero-mobile.jpg'
 import '../App.css';
 import Blogs from "./Blogs";
 
@@ -25,7 +25,7 @@ const BlogsMobile = () => {
         <div id="blogs" className="bg-beige flex flex-col">
             <div className="h-[11vh]"></div>
             <div className="bg-blackshadow grid grid-rows-1 grid-cols-1">  {/* hero div */}
-                <img src={hero} alt="hero" className="p-6 mx-auto h-full" style={{gridColumn: 1, gridRow: 1}}></img>
+                <img src={hero} alt="hero" className="p-6 mx-auto" style={{gridColumn: 1, gridRow: 1}}></img>
                 <div className="self-end mx-auto" style={{gridColumn: 1, gridRow: 1}}>
                     <p className="text-[40px] text-pinkbeige mb-6">/blogs</p>
                 </div>

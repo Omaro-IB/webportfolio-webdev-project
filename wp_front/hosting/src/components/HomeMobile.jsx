@@ -1,11 +1,12 @@
 import {HiArrowNarrowRight} from 'react-icons/hi';
 import me from '/assets/me.png';
-import hero from '/assets/home-hero-mobile.png'
+import hero from '/assets/home-hero-mobile.jpg'
 import { Link } from "react-scroll";
 import { Link as RouterLink} from "react-router-dom";
 import '../App.css';
 import { TypeAnimation } from 'react-type-animation';
 import SocialIcons from "./SocialIcons.jsx";
+import resume from "/assets/resume.pdf";
 
 
 const TyperSmall = () => {
@@ -30,12 +31,12 @@ const HomeMobile = ({subtitle, p1_text, p2_text}) => {
         <div id="home" className="bg-beige flex flex-col">
             <div className="h-[11vh]"></div>
             <div className="bg-blackshadow grid grid-rows-1 grid-cols-1">  {/* name div */}
-                <img src={hero} alt="hero" className="p-6 mx-auto h-full" style={{gridColumn: 1, gridRow: 1}}></img>
+                <img src={hero} alt="hero" className="p-6 mx-auto" style={{gridColumn: 1, gridRow: 1}}></img>
                 <div className="mx-auto my-auto" style={{gridColumn: 1, gridRow: 1}}>
                     <img src={me} alt="profile" className="w-[150px] h-[150px] mx-auto"></img>
                     <TyperSmall/>
                     <hr className="w-32 border-2 border-whitehighlight hover:border-buttongreen duration-500 mx-auto"></hr>
-                    <p className="text-[17px] text-pinkbeige mx-auto mt-3">{subtitle}</p>
+                    <p className="text-[17px] text-pinkbeige mx-auto mt-3 text-center">{subtitle}</p>
                 </div>
                 <div className="self-end mx-auto" style={{gridColumn: 1, gridRow: 1}}>
                     <p className="text-[40px] text-pinkbeige mb-6">/home</p>
@@ -51,15 +52,16 @@ const HomeMobile = ({subtitle, p1_text, p2_text}) => {
                     {p2_text}
                 </p>
                 <div className="max-w-fit mt-10"> {/* buttons */}
-                    <div className="grid grid-cols-2">
-                        <Link to="contact" smooth duration={500} style={{width: "110px", height: "40px"}}
-                              className="px-4 py-1 duration-500 shadow-box hover:shadow-none group border-solid border-2 border-black text-white bg-gradient-to-r from-buttongreen to-buttongreengradient cursor-pointer">
+                    <div className="grid grid-cols-3">
+                        <Link to="contact" smooth duration={500} className="px-4 py-1 duration-500 shadow-box hover:shadow-none group border-solid border-2 border-black text-white bg-gradient-to-r from-buttongreen to-buttongreengradient cursor-pointer">
                             <p className={"text-whitehighlight"}>Contact Me</p>
                         </Link>
-                        <RouterLink to="/blogs" smooth duration={500} style={{width: "110px", height: "40px"}}
-                                    className="ml-2 px-4 py-1 duration-500 shadow-box hover:shadow-none group border-solid border-2 border-black text-white bg-gradient-to-r from-buttongreen to-buttongreengradient cursor-pointer">
+                        <RouterLink to="/blogs" smooth duration={500} className="ml-2 px-4 py-1 duration-500 shadow-box hover:shadow-none group border-solid border-2 border-black text-white bg-gradient-to-r from-buttongreen to-buttongreengradient cursor-pointer">
                             <p className={"text-whitehighlight"}>Read More</p>
                         </RouterLink>
+                        <a href={resume} className="ml-2 px-4 py-1 duration-500 shadow-box hover:shadow-none group border-solid border-2 border-black text-white bg-gradient-to-r from-buttongreen to-buttongreengradient cursor-pointer">
+                            <p className={"text-whitehighlight"}>See Resume</p>
+                        </a>
                     </div>
                 </div>
                 <div className="mt-4"> {/* social media icons */}

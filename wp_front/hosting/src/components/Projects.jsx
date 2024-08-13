@@ -6,7 +6,7 @@ const ProjectBox = ({title, description, project_id, displayDemo}) => {
     const demo = "/demos/"+project_id
 
     return (
-        <div id="projectbox" style={{ backgroundImage: `url('/assets/projectboxes/${project_id}.png')` }} className='group container flex items-center content-div'>
+        <div id="projectbox" style={{ backgroundImage: `url('/assets/projectboxes/${project_id}.jpg')` }} className='group container flex items-center content-div'>
             {/* Hover Effects */}
             <div className='opacity-0 group-hover:opacity-100 grid grid-rows-3 gap-0 items-center self-center mx-auto'>
                             <span className=' text-lg font-bold text-pinkbeige text-center mx-auto'>

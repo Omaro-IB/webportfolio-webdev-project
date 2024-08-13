@@ -1,8 +1,3 @@
-# Backend
-wp_back
-/wp_back/
-wp_back/*
-
 # Logs
 logs
 *.log
@@ -13,8 +8,9 @@ pnpm-debug.log*
 lerna-debug.log*
 
 # Modules and assets
-wp_front/node_modules
-wp_front/public
+.firebase
+node_modules
+wp_front/hosting/public
 dist
 dist-ssr
 *.local
@@ -36,3 +32,6 @@ package.json
 package-lock.json
 .eslintrc.cjs
 vite.config.js
+sslcert
+.env
+deploy_backend.sh
