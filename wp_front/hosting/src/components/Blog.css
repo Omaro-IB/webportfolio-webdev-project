@@ -1,0 +1,10 @@
+.blog h1   {font-size: 2em; font-family: GTPressuraMedium; margin-top: 1em}
+.blog h2   {font-size: 1.5em; font-family: GTPressuraMedium}
+.blog h6   {margin-top: 1em}
+.blog p {font-size: 1em; font-family: GTPressuraLight}
+.blog a {font-size: 1em; color: blue; text-decoration: underline; font-family: GTPressuraLight}
+.blog ol {list-style-type: decimal}
+.blog ul {list-style-type: initial}
+.blog li {font-size: 1em; font-family: GTPressuraLight; margin-left: 10px; list-style-type: inherit}
+.blog pre {background-color: #cccccc; color: #151515; padding: 10px}
+.blog code {background-color: #cccccc; color: #151515}

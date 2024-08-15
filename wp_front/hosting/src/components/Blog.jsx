@@ -1,49 +1,15 @@
 import '../App.css';
 import { PiMediumLogoFill } from "react-icons/pi";
 import {FaLinkedin, FaTimes} from 'react-icons/fa';
-
-// "bg-codebg text-codewhite font-['Consolas'] mt-[28px] p-4"
-
-function parseContent(content) {
-    let index = 0
-
-    let state = 0  // 0 = paragraph, 1 = code
-    const elems = []
-    let current =  []
-
-    while (index < content.length) {
-        if (content[index] === "PS") { state = 0; current = []}  // paragraph
-        else if (state === 0 && content[index].slice(0,2) === "n:") {current.push(<span><br /><br />    {content[index].slice(2)}</span>)}  // paragraph - new line
-        else if (state === 0 && content[index].slice(0,2) === "i:") {current.push(<span>{content[index].slice(2)}</span>)}  // paragraph - inline
-        else if (state === 0 && content[index].slice(0,2) === "l:") {  // paragraph - inline link
-            let x = content[index].slice(2).split("|")
-            current.push(<a className={"text-buttongreen hover:text-buttongreenhighlight underline"} href={x[1]}>{x[0]}</a>)
-        }
-        else if (content[index] === "PE") {elems.push(<div className="text-blackshadow font-['GTPressuraLight']">{current}</div>)}  // paragraph
-
-        else if (content[index] === "CS") { state = 1; current = []}  // code
-        else if (state === 1 && content[index].slice(0,2) === "n:") {current.push(<span className={"text-codewhite"}><br />{content[index].slice(2)}</span>)}  // code - new line
-        else if (state === 1 && content[index].slice(0,2) === "i:") {current.push(<span className={"text-codewhite"}>{content[index].slice(2)}</span>)}  // code - new line
-        else if (state === 1 && content[index].slice(0,2) === "b:") {current.push(<span className={"text-codeblue"}>{content[index].slice(2)}</span>)}  // code - new line
-        else if (state === 1 && content[index].slice(0,2) === "g:") {current.push(<span className={"text-codegreen"}>{content[index].slice(2)}</span>)}  // code - new line
-        else if (state === 1 && content[index].slice(0,2) === "o:") {current.push(<span className={"text-codeorange"}>{content[index].slice(2)}</span>)}  // code - new line
-        else if (state === 1 && content[index].slice(0,2) === "p:") {current.push(<span className={"text-codepurple"}>{content[index].slice(2)}</span>)}  // code - new line
-        else if (state === 1 && content[index].slice(0,2) === "r:") {current.push(<span className={"text-codered"}>{content[index].slice(2)}</span>)}  // code - new line
-        else if (state === 1 && content[index].slice(0,2) === "t:") {current.push(<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>)}  // code - new line
-        else if (content[index] === "CE") {elems.push(<div className="bg-codebg text-codewhite font-['Consolas'] mt-6 p-4">{current}</div>); elems.push(<br />)}  // code
-
-        index++
-    }
-
-    return (<div>{elems}</div>)
-}
+import Markdown from 'react-markdown'
+import "./Blog.css"
 
 
 function Blog({title, date, medium, linkedin, image, image_subtitle, content, onClose}) {
     const imgSrc = "/assets/blogimages/" + image
 
     return (
-        <div className="bg-beige w-screen">
+        <div className="bg-beige w-screen h-max">
             <div className="origin-center mx-auto flex flex-col mt-[15vh] w-[90vw] sm:w-[50vw]">
                 <div className={"flex flex-row w-full justify-between"}>
                     <h1 className="font-bold text-3xl sm:text-5xl">{title}</h1>
@@ -73,7 +39,9 @@ function Blog({title, date, medium, linkedin, image, image_subtitle, content, on
                 <p className="self-center text-center text-[12px] sm:text-[14px] mt-1 text-greydef">{image_subtitle}</p>
                 <br/>
 
-                {parseContent(content)}
+                <div className={"blog"}>
+                    <Markdown>{content}</Markdown>
+                </div>
 
                 <br className="mt-24"></br>
             </div>

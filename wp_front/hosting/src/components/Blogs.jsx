@@ -24,7 +24,7 @@ const Blogs = () => {
     const [linkedin, setLinkedin] = useState("");
     const [image, setImage] = useState("");
     const [image_subtitle, setImage_subtitle] = useState("");
-    const [content, setContent] = useState([]);
+    const [content, setContent] = useState("");
 
     return (
         <div>
@@ -32,6 +32,16 @@ const Blogs = () => {
                 <Blog title={title} date={date} medium={medium} linkedin={linkedin} image={image} image_subtitle={image_subtitle} content={content} onClose={() => setDisplay(false)}/>
             </div>
 
+            <div className={"p-10"}>
+                {data.blogs.map(d => <BlogBox key={d.linkedin} title = {d.title} date = {d.date} description = {d.description} onClick = {() =>
+                {
+                    setDisplay(true)
+                    setTitle(d.title); setDate(d.date); setMedium(d.medium); setLinkedin(d.linkedin); setImage(d.image); setImage_subtitle(d.image_subtitle); setContent(d.content)
+                }
+                } />)}
+            </div>
+
+            {/*TODO Remove this:*/}
             <div className={"sm:mt-[15vh] ml-[2.5vw]"}>
                 <h1 className={"text-6xl p-20"}>Nothing here yet... please come back later!</h1>
             </div>
