@@ -6,7 +6,7 @@ const baseUrl = 'https://fsop3.omaribrah.im:4442/recipe/'
 
 const downloadFile = (html) => {
     const element = document.createElement("a");
-    const file = new Blob([html], {type: 'text/plain'});
+    const file = new Blob([html], {type: 'text/html'});
     element.href = URL.createObjectURL(file);
     element.download = "recipe.html";
     document.body.appendChild(element); // Required for this to work in FireFox
@@ -54,7 +54,7 @@ function RecipeDemo() {
                 {/*Output*/}
                 <div className={"bg-whitehighlight mt-10 w-10/12 p-2 min-h-60"}>
                     <p className={"text-greydef italic text-sm"}>Source: cooking.nytimes.com</p>
-                    <div dangerouslySetInnerHTML={{ __html: output }}></div>
+                    <div className={"overflow-auto"} dangerouslySetInnerHTML={{ __html: output }}></div>
                 </div>
             </div>
         </div>
