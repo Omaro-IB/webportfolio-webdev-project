@@ -35,3 +35,4 @@ vite.config.js
 sslcert
 .env
 deploy_backend.sh
+wp_back/scripts/*

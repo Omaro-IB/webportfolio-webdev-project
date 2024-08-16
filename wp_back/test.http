@@ -1,5 +1,5 @@
-### GET request to backend
-POST https://fsop3.omaribrah.im:4442/submit/
+### POST request to backend
+POST https://127.0.0.1:4442/submit/
 Content-Type: application/json
 
 {
@@ -8,4 +8,13 @@ Content-Type: application/json
   "message": "hello :)"
 }
 
+###
+
+### GET request to backend
+GET https://127.0.0.1:4442/recipe/
+Content-Type: application/json
+
+{
+  "input": "https://www.allrecipes.com/recipe/25871/grilled-fish-steaks/"
+}
 ###

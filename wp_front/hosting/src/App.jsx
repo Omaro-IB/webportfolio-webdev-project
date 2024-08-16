@@ -1,7 +1,7 @@
 import './App.css';
 import NotFound from "./pages/NotFound";
 import HomePage from "./pages/HomePage"
-// import RecipeDemoPage from "./pages/RecipeDemoPage";
+import RecipeDemo from "./demos/RecipeDemo.jsx";
 import BlogsPage from "./pages/BlogsPage";
 import AboutPage from "./pages/AboutPage"
 import {
@@ -16,7 +16,7 @@ const Main = () => {
             <Route exact path="/" Component={HomePage}/>
             <Route exact path="/home" Component={HomePage}/>
             <Route exact path="/index" Component={HomePage}/>
-            {/*<Route exact path="/demos/minimalrecipe-scripting-tool" Component={RecipeDemoPage}/>*/}
+            <Route exact path="/demos/minimalrecipe-scripting-tool" Component={RecipeDemo}/>
             <Route exact path="/blogs" Component={BlogsPage}/>
             <Route exact path="/about" Component={AboutPage}/>
             <Route exact path="*" Component={NotFound}/>

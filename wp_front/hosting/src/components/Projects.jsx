@@ -42,7 +42,7 @@ const Projects = () => {
             </div>
             <div className="grid grid-cols-1 gap-1 sm:grid-cols-3 self-center sm:p-0 p-4">  {/* Project boxes div */}
                 {data.projects.map((project) => (
-                    <ProjectBox key={project.id} title={project.title} description={project.description} project_id={project.id}></ProjectBox>
+                    <ProjectBox key={project.id} title={project.title} description={project.description} project_id={project.id} displayDemo={project.demo}></ProjectBox>
                 ))}
             </div>
         </div>
