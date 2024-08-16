@@ -1,9 +1,13 @@
 import React from 'react';
 import data from "../data.json"
 
-const ProjectBox = ({title, description, project_id, displayDemo}) => {
+const ProjectBox = ({title, description, project_id, demo}) => {
     const github = "https://github.com/Omaro-IB/"+project_id
-    const demo = "/demos/"+project_id
+
+    let demoLink = ''; let displayDemo = true
+    if (demo === "disabled") {displayDemo = false}
+    else if (demo === "auto") {demoLink = "/demos/"+project_id}
+    else {demoLink = demo}
 
     return (
         <div id="projectbox" style={{ backgroundImage: `url('/assets/projectboxes/${project_id}.jpg')` }} className='group container flex items-center content-div'>
@@ -14,7 +18,7 @@ const ProjectBox = ({title, description, project_id, displayDemo}) => {
                             </span>
                 <p className='text-center text-pinkbeige px-3'>{description}</p>
                 <div className='pt-8 text-center'>
-                    <a href={demo}>
+                    <a href={demoLink}>
                         <button className={displayDemo? 'text-center px-4 py-3 m-2 bg-white text-pinkbeige font-bold text-lg': "hidden"}>
                             Demo
                         </button>
@@ -42,7 +46,7 @@ const Projects = () => {
             </div>
             <div className="grid grid-cols-1 gap-1 sm:grid-cols-3 self-center sm:p-0 p-4">  {/* Project boxes div */}
                 {data.projects.map((project) => (
-                    <ProjectBox key={project.id} title={project.title} description={project.description} project_id={project.id} displayDemo={project.demo}></ProjectBox>
+                    <ProjectBox key={project.id} title={project.title} description={project.description} project_id={project.id} demo={project.demo}></ProjectBox>
                 ))}
             </div>
         </div>

@@ -5,12 +5,12 @@
     "home_sub": "Data Science & Development"
   },
   "projects": [
-    {"id": "webportfolio-webdev-project", "title": "Web Portfolio", "description": "Of course I'll include my portfolio here", "demo":  false},
-    {"id": "trafficpredictor-ML-project", "title": "Network Traffic Prediction", "description": "Accurately predict types of internet traffic using recurrent neural networks and Bayes Nets ", "demo":  false},
-    {"id": "nofusscalendar-android-project", "title": "No Fuss Calendar", "description": "An Android Calendar app that requires no online account for sync, simply using an offline file for storage instead", "demo":  false},
-    {"id": "anomalydetection-ML-project", "title": "Anomaly Detection", "description": "Detect anomalous readings in energy usage using logistic regression", "demo":  false},
-    {"id": "minimalrecipe-scripting-tool", "title": "Recipe Sanitizer", "description": "Cleanly format and downloading online recipes for offline storage and dodging all the ads/other annoying nonsense", "demo":  true},
-    {"id": "tutor-webdev-project", "title": "Two-Tors", "description": "A landing/advert web page for a tutoring service", "demo":  false}
+    {"id": "webportfolio-webdev-project", "title": "Web Portfolio", "description": "Of course I'll include my portfolio here", "demo":  "https://omaribrah.im"},
+    {"id": "trafficpredictor-ML-project", "title": "Network Traffic Prediction", "description": "Accurately predict types of internet traffic using recurrent neural networks and Bayes Nets ", "demo":  "disabled"},
+    {"id": "nofusscalendar-android-project", "title": "No Fuss Calendar", "description": "An Android Calendar app that requires no online account for sync, simply using an offline file for storage instead", "demo":  "disabled"},
+    {"id": "anomalydetection-ML-project", "title": "Anomaly Detection", "description": "Detect anomalous readings in energy usage using logistic regression", "demo":  "disabled"},
+    {"id": "minimalrecipe-scripting-tool", "title": "Recipe Sanitizer", "description": "Cleanly format and downloading online recipes for offline storage and dodging all the ads/other annoying nonsense", "demo":  "auto"},
+    {"id": "tutor-webdev-project", "title": "Two-Tors", "description": "A landing/advert web page for a tutoring service", "demo":  "https://two-tors.web.app/"}
   ],
   "blogs": []
 }
