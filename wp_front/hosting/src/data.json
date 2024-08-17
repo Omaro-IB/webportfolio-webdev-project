@@ -5,7 +5,7 @@
     "home_sub": "Data Science & Development"
   },
   "projects": [
-    {"id": "webportfolio-webdev-project", "title": "Web Portfolio", "description": "Of course I'll include my portfolio here", "demo":  "https://omaribrah.im", "skills":  ["img:NodeJS.svg", "img:Express.png", "img:React.svg", "img:MongoDB.png", "img:JavaScript.png", "img:AWS.png"]},
+    {"id": "webportfolio-webdev-project", "title": "Web Portfolio", "description": "Of course I'll include my portfolio here", "demo":  "https://omaribrah.im", "learn_more": "disabled", "skills":  ["img:NodeJS.svg", "img:Express.png", "img:React.svg", "img:MongoDB.png", "img:JavaScript.png", "img:AWS.png"]},
     {"id": "trafficpredictor-ML-project", "title": "Network Traffic Prediction", "description": "Accurately predict types of internet traffic using recurrent neural networks and Bayes Nets ", "demo":  "disabled", "learn_more": "disabled", "skills": ["img:Python.png", "img:Wireshark.png", "txt:Web Scraping", "img:PyTorch.png", "txt: Bayes", "txt: RNNs"]},
     {"id": "nofusscalendar-android-project", "title": "No Fuss Calendar", "description": "An Android Calendar app that requires no online account for sync, simply using an offline file for storage instead", "demo":  "disabled", "learn_more": "disabled", "skills":  ["img:Kotlin.svg", "img:JetpackCompose.svg", "txt:UX Design"]},
     {"id": "anomalydetection-ML-project", "title": "Anomaly Detection", "description": "Detect anomalous readings in energy usage using logistic regression", "demo":  "disabled", "learn_more": "disabled", "skills":  ["img:Python.png", "img:SkLearn.svg", "img:Plotly.svg", "img:Pandas.svg", "img:Numpy.svg" ,"txt:regression"]},
