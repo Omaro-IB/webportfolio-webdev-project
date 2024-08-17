@@ -2,6 +2,8 @@ import '../App.css';
 import data from "../data.json"
 import Blog from "./Blog";
 import {useState} from "react";
+import { useParams, useNavigate } from 'react-router-dom';
+
 
 const BlogBox = ({title, date, description, onClick}) => {
     return (
@@ -17,27 +19,19 @@ const BlogBox = ({title, date, description, onClick}) => {
 }
 
 const Blogs = () => {
-    const [display, setDisplay] = useState(false);
-    const [title, setTitle] = useState("");
-    const [date, setDate] = useState("");
-    const [medium, setMedium] = useState("");
-    const [linkedin, setLinkedin] = useState("");
-    const [image, setImage] = useState("");
-    const [image_subtitle, setImage_subtitle] = useState("");
-    const [content, setContent] = useState("");
+    const params = useParams();
+    const navigate = useNavigate();
+    const [display, setDisplay] = useState(!params.id? '': params.id)
 
     return (
         <div>
-            <div className={display? "absolute z-20 top-0 left-0 w-screen h-screen bg-beige" : "hidden"}>
-                <Blog title={title} date={date} medium={medium} linkedin={linkedin} image={image} image_subtitle={image_subtitle} content={content} onClose={() => setDisplay(false)}/>
+            <div className={(display.length > 0)? "absolute z-20 top-0 left-0 w-screen h-screen bg-beige" : "hidden"}>
+                <Blog blog_id={display} onClose={() => setDisplay(false)}/>
             </div>
 
             <div className={"p-10"}>
-                {data.blogs.map(d => <BlogBox key={d.linkedin} title = {d.title} date = {d.date} description = {d.description} onClick = {() =>
-                {
-                    setDisplay(true)
-                    setTitle(d.title); setDate(d.date); setMedium(d.medium); setLinkedin(d.linkedin); setImage(d.image); setImage_subtitle(d.image_subtitle); setContent(d.content)
-                }
+                {data.blogs.map(d => <BlogBox key={d.id} title = {d.title} date = {d.date} description = {d.description} onClick = {() =>
+                {setDisplay(d.id)}
                 } />)}
             </div>
 

@@ -18,6 +18,7 @@ const Main = () => {
             <Route exact path="/index" Component={HomePage}/>
             <Route exact path="/demos/minimalrecipe-scripting-tool" Component={RecipeDemo}/>
             <Route exact path="/blogs" Component={BlogsPage}/>
+            <Route exact path="/blogs/:id" Component={BlogsPage}/>
             <Route exact path="/about" Component={AboutPage}/>
             <Route exact path="*" Component={NotFound}/>
         </Routes> </Router>

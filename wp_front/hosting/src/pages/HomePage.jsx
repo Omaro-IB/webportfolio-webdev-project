@@ -24,7 +24,7 @@ function HomePage() {
     if (matches) {
         return (
             <div>
-                <   Navbar callingPage="home"> </Navbar>
+                <Navbar callingPage="home"> </Navbar>
                 <HomeDesktop subtitle={subtitle} p1_text={p1_text} p2_text={p2_text}> </HomeDesktop>
                 <Projects> </Projects>
                 <Contact> </Contact>
