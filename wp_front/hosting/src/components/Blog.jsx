@@ -24,16 +24,14 @@ function Blog({blog_id, onClose}) {
         <div className={"mt-[11vh] text-center h-6"}>{message}</div>
         <div className="origin-center mx-auto flex flex-col w-[90vw] sm:w-[50vw]">
             <div className={"flex flex-row w-full justify-between"}>
-                <div className={"flex flex-row"}>
-                    <RouterLink to={"/blogs/" + blog_id}>
-                        <h1 className="font-bold text-3xl sm:text-5xl">{blog_data.title}</h1>
-                    </RouterLink>
-                    <FaShareFromSquare className={"h-[25px] w-[25px] self-center ml-8 cursor-pointer"} onClick={() => {
-                        navigator.clipboard.writeText("https://omaribrah.im/blogs/" + blog_id).then(displayMessage("Copied!"))
-                    }}></FaShareFromSquare>
-                </div>
+                <RouterLink to={"/blogs/" + blog_id}>
+                    <h1 className="font-bold text-3xl sm:text-5xl">{blog_data.title}</h1>
+                </RouterLink>
                 <FaTimes className={"w-10 h-10 cursor-pointer fill-codered"} onClick={onClose}></FaTimes>
             </div>
+            <FaShareFromSquare className={"h-[25px] w-[25px] cursor-pointer"} onClick={() => {
+                navigator.clipboard.writeText("https://omaribrah.im/blogs/" + blog_id).then(displayMessage("Copied!"))
+            }}></FaShareFromSquare>
             <h2>{blog_data.date} &nbsp; &nbsp; • &nbsp; &nbsp; Omar Ibrahim</h2>
 
             <div className="w-full py-[4vw] sm:py-[2vw] self-center"> {/* read at buttons div */}
