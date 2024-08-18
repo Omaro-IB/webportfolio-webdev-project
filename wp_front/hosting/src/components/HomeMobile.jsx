@@ -42,7 +42,7 @@ const HomeMobile = ({subtitle, p1_text, p2_text}) => {
                     <p className="text-[40px] text-pinkbeige mb-6">/home</p>
                 </div>
             </div>
-            <div className="bg-beige h-screen p-8">  {/* info div */}
+            <div className="bg-beige p-8">  {/* info div */}
                 <h1 style={{fontFamily: "PlaakCondensed"}} className="text-8xl">Welcome!</h1>
                 <br></br>
                 <p style={{fontFamily: "GTPressuraMonoLight"}}
@@ -76,7 +76,6 @@ const HomeMobile = ({subtitle, p1_text, p2_text}) => {
                     </div>
                 </Link>
             </div>
-            <div className="h-[11vh]"></div>
         </div>
     );
 };

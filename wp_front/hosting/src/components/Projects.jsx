@@ -19,7 +19,7 @@ const ProjectBox = ({title, description, project_id, demo, learn_more, skills}) 
     let skillTxts = []
     skills.forEach(skill => {
         const s = skill.split(':')
-        if (s[0] === 'img') {skillImgs.push(<img className={"m-1 h-6 sm:h-9"} src={"/assets/skillimages/" + s[1]} alt={skill} />)}
+        if (s[0] === 'img') {skillImgs.push(<img className={"m-1 h-6 sm:h-9"} src={"/assets/skillimages/" + s[1]} alt={s[1].substring(0, s[1].length - 4)} />)}
         else if (s[0] === 'txt') {skillTxts.push(<div className={"m-1 bg-gradient-to-r from-[#d4af37] to-[#f3d882] rounded-sm border-2 flex items-center p-1"}>
                                                     <PiStackPlus className={"w-[12px] sm:w-[25px] h-[12px] sm:h-[25px]"} />
                                                     <p className={"mx-1"}>{s[1]}</p>
@@ -29,7 +29,7 @@ const ProjectBox = ({title, description, project_id, demo, learn_more, skills}) 
 
 
     return (
-        <div id="projectbox" style={{backgroundImage: `url('/assets/projectboxes/${project_id}.jpg')` }} className='group container content-div flex items-center'>
+        <div id="projectbox" style={{backgroundImage: `url('/assets/projectboxes/${project_id}.jpg')` }} className='group container content-div flex items-center overflow-auto'>
             {/* Hover Effects */}
             <div className='opacity-0 group-hover:opacity-100 flex flex-col items-center p-10'>
                 <span className='text-2xl sm:text-4xl font-bold text-pinkbeige text-center'>{title}</span>
@@ -66,15 +66,16 @@ const ProjectBox = ({title, description, project_id, demo, learn_more, skills}) 
 
 const Projects = () => {
     return (
-        <div id='projects' className='bg-beige py-[10vh] flex flex-col'> {/* Project div */}
-            <div className='flex flex-col mb-5'>   {/* Title div */}
-                <p className='self-center text-3xl sm:text-4xl font-bold inline border-b-4 text-[#000000] border-greydef]'>
-                    <em className="text-greydef">/Home/</em>#Projects
-                </p>
-            </div>
-            <div className="grid grid-cols-1 gap-1 sm:grid-cols-3 self-center">  {/* Project boxes div */}
+        <div id='projects' className='bg-beige py-14'> {/* Project div */}
+            <p className='self-center text-3xl sm:text-4xl font-bold border-b-4 text-black border-greydef mb-4 w-fit mx-auto'> {/* Title */}
+                <em className="text-greydef">/Home/</em>#Projects
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 max-w-fit mx-auto bg-blackshadow">  {/* Project boxes div */}
                 {data.projects.map((project) => (
-                    <ProjectBox key={project.id} title={project.title} description={project.description} project_id={project.id} demo={project.demo} learn_more={project.learn_more} skills={project.skills}></ProjectBox>
+                    <div className={"sm:px-1 py-1 sm:my-0 my-1 bg-buttongreen sm:bg-blackshadow"}>
+                    <ProjectBox key={project.id} title={project.title} description={project.description} project_id={project.id}
+                                demo={project.demo} learn_more={project.learn_more} skills={project.skills}></ProjectBox>
+                    </div>
                 ))}
             </div>
         </div>
