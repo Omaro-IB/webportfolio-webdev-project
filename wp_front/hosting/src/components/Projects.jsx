@@ -29,7 +29,7 @@ const ProjectBox = ({title, description, project_id, demo, learn_more, skills}) 
 
 
     return (
-        <div id="projectbox" style={{backgroundImage: `url('/assets/projectboxes/${project_id}.jpg')` }} className='group container content-div flex flex-col overflow-y-scroll'>
+        <div id="projectbox" style={{backgroundImage: `url('/assets/projectboxes/${project_id}.jpg')` }} className='group container content-div flex flex-col overflow-auto'>
             {/* Hover Effects */}
             <div className='opacity-0 group-hover:opacity-100 p-10 flex flex-col items-center my-auto'>
                 {/*Title & Description*/}

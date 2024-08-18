@@ -52,14 +52,14 @@ const HomeMobile = ({subtitle, p1_text, p2_text}) => {
                     {p2_text}
                 </p>
                 <div className="max-w-fit mt-10"> {/* buttons */}
-                    <div className="grid grid-cols-3">
+                    <div className="flex flex-wrap">
                         <Link to="contact" smooth duration={500} className="px-4 py-1 duration-500 shadow-box hover:shadow-none group border-solid border-2 border-black text-white bg-gradient-to-r from-buttongreen to-buttongreengradient cursor-pointer">
                             <p className={"text-whitehighlight"}>Contact Me</p>
                         </Link>
-                        <RouterLink to="/blogs" smooth duration={500} className="ml-2 px-4 py-1 duration-500 shadow-box hover:shadow-none group border-solid border-2 border-black text-white bg-gradient-to-r from-buttongreen to-buttongreengradient cursor-pointer">
+                        <RouterLink to="/blogs" smooth duration={500} className="px-4 py-1 duration-500 shadow-box hover:shadow-none group border-solid border-2 border-black text-white bg-gradient-to-r from-buttongreen to-buttongreengradient cursor-pointer">
                             <p className={"text-whitehighlight"}>Read More</p>
                         </RouterLink>
-                        <a href={resume} className="ml-2 px-4 py-1 duration-500 shadow-box hover:shadow-none group border-solid border-2 border-black text-white bg-gradient-to-r from-buttongreen to-buttongreengradient cursor-pointer">
+                        <a href={resume} className="px-4 py-1 duration-500 shadow-box hover:shadow-none group border-solid border-2 border-black text-white bg-gradient-to-r from-buttongreen to-buttongreengradient cursor-pointer">
                             <p className={"text-whitehighlight"}>See Resume</p>
                         </a>
                     </div>

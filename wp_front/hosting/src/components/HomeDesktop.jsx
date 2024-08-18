@@ -58,10 +58,10 @@ const HomeDesktop = ({subtitle, p1_text, p2_text}) => {
                             <Link to="contact" smooth duration={500} className="px-4 py-2 duration-500 shadow-box hover:shadow-none group border-solid border-2 border-black text-white bg-gradient-to-r from-buttongreen to-buttongreengradient cursor-pointer">
                                 <p className={"text-whitehighlight"}>Contact Me</p>
                             </Link>
-                            <RouterLink to="/blogs" className="px-4 py-2 ml-4 self-start duration-500 shadow-box hover:shadow-none group border-solid border-2 border-black text-white bg-gradient-to-r from-buttongreen to-buttongreengradient cursor-pointer">
+                            <RouterLink to="/blogs" className="px-4 py-2 self-start duration-500 shadow-box hover:shadow-none group border-solid border-2 border-black text-white bg-gradient-to-r from-buttongreen to-buttongreengradient cursor-pointer">
                                 <p className={"text-whitehighlight"}>Read More</p>
                             </RouterLink>
-                            <a href={resume} className="px-4 py-2 ml-4 self-start duration-500 shadow-box hover:shadow-none group border-solid border-2 border-black text-white bg-gradient-to-r from-buttongreen to-buttongreengradient cursor-pointer">
+                            <a href={resume} className="px-4 py-2 self-start duration-500 shadow-box hover:shadow-none group border-solid border-2 border-black text-white bg-gradient-to-r from-buttongreen to-buttongreengradient cursor-pointer">
                                 <p className={"text-whitehighlight"}>See Resume</p>
                             </a>
                         </div>

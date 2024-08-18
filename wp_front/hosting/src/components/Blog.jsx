@@ -21,13 +21,13 @@ function Blog({blog_id, onClose}) {
     const imgSrc = "/assets/blogimages/" + blog_data.image
 
     return <div className="bg-beige w-screen min-h-screen h-max">
-        <div className={"mt-[11vh] text-center h-6"}>{message}</div>
+        <FaTimes className={"w-10 h-10 cursor-pointer fill-codered sm:sticky sm:top-10 sm:left-10"} onClick={onClose}></FaTimes>
+        <p className={"text-center h-10 mt-3"}>{message}</p>
         <div className="origin-center mx-auto flex flex-col w-[90vw] sm:w-[50vw]">
             <div className={"flex flex-row w-full justify-between"}>
                 <RouterLink to={"/blogs/" + blog_id}>
                     <h1 className="font-bold text-3xl sm:text-5xl">{blog_data.title}</h1>
                 </RouterLink>
-                <FaTimes className={"w-10 h-10 cursor-pointer fill-codered"} onClick={onClose}></FaTimes>
             </div>
             <FaShareFromSquare className={"h-[25px] w-[25px] cursor-pointer"} onClick={() => {
                 navigator.clipboard.writeText("https://omaribrah.im/blogs/" + blog_id).then(displayMessage("Copied!"))
@@ -56,8 +56,8 @@ function Blog({blog_id, onClose}) {
             <p className="self-center text-center text-[12px] sm:text-[14px] mt-1 text-greydef">{blog_data.image_subtitle}</p>
             <br/>
 
-            <div className={"blog"}>
-                <Markdown urlTransform={uri =>
+            <div className={"w-screen sm:w-full overflow-auto self-center px-6"}>
+                <Markdown className={"blog"} urlTransform={uri =>
                     uri.startsWith("http") ? uri : "/assets/blogimages/" + uri
                 }>{blog_data.content}</Markdown>
             </div>
