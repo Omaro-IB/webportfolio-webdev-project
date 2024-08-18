@@ -29,25 +29,26 @@ const ProjectBox = ({title, description, project_id, demo, learn_more, skills}) 
 
 
     return (
-        <div id="projectbox" style={{backgroundImage: `url('/assets/projectboxes/${project_id}.jpg')` }} className='group container content-div flex items-center overflow-auto'>
+        <div id="projectbox" style={{backgroundImage: `url('/assets/projectboxes/${project_id}.jpg')` }} className='group container content-div flex flex-col overflow-y-scroll'>
             {/* Hover Effects */}
-            <div className='opacity-0 group-hover:opacity-100 flex flex-col items-center p-10'>
+            <div className='opacity-0 group-hover:opacity-100 p-10 flex flex-col items-center my-auto'>
+                {/*Title & Description*/}
                 <span className='text-2xl sm:text-4xl font-bold text-pinkbeige text-center'>{title}</span>
                 <p className='mt-2 text-sm sm:text-2xl text-pinkbeige text-center'>{description}</p>
 
                 {/*Buttons*/}
-                <div className={"my-10"}>
-                    <a href={demoLink} className={displayDemo? "mx-5 p-2 duration-500 shadow-box2 hover:shadow-none border-solid border-2 border-buttongreenshadow bg-whitehighlight text-buttongreenshadow text-lg": "hidden"}>
+                <div className={"my-4"}>
+                    <a href={demoLink} className={displayDemo? "mx-[1vw] p-2 duration-500 shadow-box2 hover:shadow-none border-solid border-2 border-buttongreenshadow bg-whitehighlight text-buttongreenshadow text-lg": "hidden"}>
                         <button>
                             Demo
                         </button>
                     </a>
-                    <a href={github} className={"mx-5 p-2 duration-500 shadow-box2 hover:shadow-none border-solid border-2 border-buttongreenshadow bg-whitehighlight text-buttongreenshadow text-lg"}>
+                    <a href={github} className={"mx-[1vw]-5 p-2 duration-500 shadow-box2 hover:shadow-none border-solid border-2 border-buttongreenshadow bg-whitehighlight text-buttongreenshadow text-lg"}>
                         <button>
                             Code
                         </button>
                     </a>
-                    <RouterLink to={"/blogs/"+learnLink} className={displayLearn? "mx-5 p-2 duration-500 shadow-box2 hover:shadow-none border-solid border-2 border-buttongreenshadow bg-whitehighlight text-buttongreenshadow text-lg": "hidden"}>
+                    <RouterLink to={"/blogs/"+learnLink} className={displayLearn? "mx-[1vw] p-2 duration-500 shadow-box2 hover:shadow-none border-solid border-2 border-buttongreenshadow bg-whitehighlight text-buttongreenshadow text-lg": "hidden"}>
                         <button>
                             Learn More
                         </button>

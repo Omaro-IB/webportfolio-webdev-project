@@ -91,19 +91,19 @@ const Navbar = ({callingPage}) => {
     }
 
     return (
-        <div className='z-50 fixed w-full h-[11vh] flex justify-between items-center px-4 bg-buttongreenshadow border hover:border-b-buttongreenhighlight border-b-pinkbeige text-gray-300 overflow-clip'>
+        <div className='fixed w-full h-[11vh] flex justify-between items-center px-4 bg-buttongreenshadow border hover:border-b-buttongreenhighlight border-b-pinkbeige text-gray-300 sm:overflow-clip'>
             {/* Logo */}
             <RouterLink to={"/home"} reloadDocument={true}> <img src={logo} alt="logo" className="w-14"/></RouterLink>
-            {/* Sticky Menu */}
+            {/* Desktop Sticky Menu */}
             <ul className='hidden sm:flex'>
                 {data.map((d) => <li key={d.link}><NavbarStickyItem ext={d.ext} link={d.link}>{d.stickyChild}</NavbarStickyItem></li>)}
             </ul>
             {/* Mobile Hamburger */}
-            <div onClick={handleClick} className='sm:hidden z-10'>
+            <div onClick={handleClick} className='sm:hidden z-20'>
                 {!nav ? <FaBars className="w-[30px] h-[30px] fill-pinkbeige" /> : <FaTimes className="w-[30px] h-[30px] fill-pinkbeige"/>}
             </div>
             {/* Hidden Menu */}
-            <ul className={!nav ? 'hidden' : 'absolute top-0 left-0 w-screen h-screen bg-blackshadow flex flex-col items-center justify-center'}>
+            <ul className={!nav ? 'hidden' : 'z-10 absolute top-0 left-0 w-screen h-screen bg-buttongreenshadow flex flex-col items-center justify-center'}>
                 {data.map((d) => <li key={d.link}><NavbarHamburgerItem ext={d.ext} link={d.link} onClickFunc={handleClick}>{d.hamburgerChild}</NavbarHamburgerItem></li>)}
                 <div className="mt-10 text-pinkbeige"><SocialIcons /></div>
             </ul>
