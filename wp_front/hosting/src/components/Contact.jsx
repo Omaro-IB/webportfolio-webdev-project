@@ -6,7 +6,7 @@ import {Scramble} from "./Scramble.js";
 const Contact = () => {
     return (
         <div id="contact" className="bg-beige py-10">
-            <div className='py-10 sticky w-[90vw] sm:w-[60vw] mx-auto text-pinkbeige bg-blackshadow rounded-[30px]'>
+            <div className='py-10 sticky w-[90vw] sm:w-[60vw] mx-auto text-pinkbeige bg-blackshadow rounded-lg shadow-box2'>
                 <div className="flex flex-col items-center">  {/* main contact flex-box */}
                     <div className="text-3xl md:text-4xl">  {/* contact title */}
                         <em className="text-greydef">/Home/</em>#Contact

@@ -32,7 +32,7 @@ const HomeMobile = ({subtitle, p1_text, p2_text}) => {
             <div className="h-[11vh]"></div>
             <div className="bg-blackshadow grid grid-rows-1 grid-cols-1">  {/* name div */}
                 <img src={hero} alt="hero" className="p-6 mx-auto" style={{gridColumn: 1, gridRow: 1}}></img>
-                <div className="mx-auto my-auto" style={{gridColumn: 1, gridRow: 1}}>
+                <div className="mx-auto my-auto z-0" style={{gridColumn: 1, gridRow: 1}}>
                     <img src={me} alt="profile" className="w-[150px] h-[150px] mx-auto"></img>
                     <TyperSmall/>
                     <hr className="w-32 border-2 border-whitehighlight hover:border-buttongreen duration-500 mx-auto"></hr>

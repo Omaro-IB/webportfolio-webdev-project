@@ -6,5 +6,5 @@
 .blog ol {list-style-type: decimal}
 .blog ul {list-style-type: initial}
 .blog li {font-size: 1em; font-family: GTPressuraLight; margin-left: 10px; list-style-type: inherit}
-.blog pre {background-color: #cccccc; color: #151515; padding: 10px}
+.blog pre {background-color: #cccccc; color: #151515; padding: 10px; overflow: auto}
 .blog code {background-color: #cccccc; color: #151515}

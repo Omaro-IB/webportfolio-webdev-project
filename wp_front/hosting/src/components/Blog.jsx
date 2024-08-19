@@ -21,8 +21,11 @@ function Blog({blog_id, onClose}) {
     const imgSrc = "/assets/blogimages/" + blog_data.image
 
     return <div className="bg-beige w-screen min-h-screen h-max">
-        <FaTimes className={"w-10 h-10 cursor-pointer fill-codered sm:sticky sm:top-10 sm:left-10"} onClick={onClose}></FaTimes>
-        <p className={"text-center h-10 mt-3"}>{message}</p>
+        <div className={"h-[11vh]"}></div>
+        <div className={"flex flex-row items-center h-10 w-[90vw] mx-auto"}>
+            <FaTimes className={"w-10 h-10 cursor-pointer fill-codered"} onClick={onClose}></FaTimes>
+            <p className={"mx-auto"}>{message}</p>
+        </div>
         <div className="origin-center mx-auto flex flex-col w-[90vw] sm:w-[50vw]">
             <div className={"flex flex-row w-full justify-between"}>
                 <RouterLink to={"/blogs/" + blog_id}>

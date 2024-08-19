@@ -9,7 +9,7 @@ import { IoTimeOutline } from "react-icons/io5"
 const BlogBox = ({title, date, description, onClick}) => {
     return (
         <div onClick={onClick} className={"cursor-pointer"}>
-            <div className="p-4 min-h-40 bg-[#f1e4d4] border-solid border-b-4 border-buttongreen hover:border-buttongreenhighlight shadow-box hover:shadow-none duration-500">
+            <div className="p-4 min-h-40 bg-[#f1e4d4] border-solid border-b-4 border-buttongreen hover:border-buttongreenhighlight shadow-box hover:shadow-none duration-500 rounded-lg">
                 <h1 className="text-2xl">{title}</h1>
                 <div className={"flex flex-row items-center"}><IoTimeOutline /><h1 className="text-lg m-3">{date}</h1></div>
                 <p style={{fontFamily:"GTPressuraMono"}}> {description} </p>

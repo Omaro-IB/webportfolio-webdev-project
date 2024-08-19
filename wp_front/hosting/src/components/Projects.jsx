@@ -38,17 +38,17 @@ const ProjectBox = ({title, description, project_id, demo, learn_more, skills}) 
 
                 {/*Buttons*/}
                 <div className={"my-4"}>
-                    <a href={demoLink} className={displayDemo? "mx-[1vw] p-2 duration-500 shadow-box2 hover:shadow-none border-solid border-2 border-buttongreenshadow bg-whitehighlight text-buttongreenshadow text-lg": "hidden"}>
+                    <a href={demoLink} className={displayDemo? "p-2 duration-500 shadow-box2 hover:shadow-none border-solid border-2 border-buttongreenshadow bg-whitehighlight text-buttongreenshadow text-lg": "hidden"}>
                         <button>
                             Demo
                         </button>
                     </a>
-                    <a href={github} className={"mx-[1vw]-5 p-2 duration-500 shadow-box2 hover:shadow-none border-solid border-2 border-buttongreenshadow bg-whitehighlight text-buttongreenshadow text-lg"}>
+                    <a href={github} className={"p-2 duration-500 shadow-box2 hover:shadow-none border-solid border-2 border-buttongreenshadow bg-whitehighlight text-buttongreenshadow text-lg"}>
                         <button>
                             Code
                         </button>
                     </a>
-                    <RouterLink to={"/blogs/"+learnLink} className={displayLearn? "mx-[1vw] p-2 duration-500 shadow-box2 hover:shadow-none border-solid border-2 border-buttongreenshadow bg-whitehighlight text-buttongreenshadow text-lg": "hidden"}>
+                    <RouterLink to={"/blogs/"+learnLink} className={displayLearn? "p-2 duration-500 shadow-box2 hover:shadow-none border-solid border-2 border-buttongreenshadow bg-whitehighlight text-buttongreenshadow text-lg": "hidden"}>
                         <button>
                             Learn More
                         </button>
