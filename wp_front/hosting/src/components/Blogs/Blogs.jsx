@@ -1,6 +1,6 @@
-import '../App.css';
-import data from "../data.json"
-import Blog from "./Blog";
+import '../../App.css';
+import data from "../../data.json"
+import Blog from "./Blog.jsx";
 import {useState} from "react";
 import { useParams, useNavigate } from 'react-router-dom';
 import { IoTimeOutline } from "react-icons/io5"

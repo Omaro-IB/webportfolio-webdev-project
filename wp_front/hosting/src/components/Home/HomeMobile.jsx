@@ -1,11 +1,10 @@
 import {HiArrowNarrowRight} from 'react-icons/hi';
 import me from '/assets/me.png';
 import hero from '/assets/home-hero-mobile.jpg'
-import { Link } from "react-scroll";
-import { Link as RouterLink} from "react-router-dom";
-import '../App.css';
+import {HashLink} from "react-router-hash-link";
+import '../../App.css';
 import { TypeAnimation } from 'react-type-animation';
-import SocialIcons from "./SocialIcons.jsx";
+import SocialIcons from "../SocialIcons.jsx";
 import resume from "/assets/resume.pdf";
 
 
@@ -28,8 +27,7 @@ const TyperSmall = () => {
 
 const HomeMobile = ({subtitle, p1_text, p2_text}) => {
     return (
-        <div id="home" className="bg-beige flex flex-col">
-            <div className="h-[11vh]"></div>
+        <div className="bg-beige flex flex-col">
             <div className="bg-blackshadow grid grid-rows-1 grid-cols-1">  {/* name div */}
                 <img src={hero} alt="hero" className="p-6 mx-auto" style={{gridColumn: 1, gridRow: 1}}></img>
                 <div className="mx-auto my-auto z-0" style={{gridColumn: 1, gridRow: 1}}>
@@ -53,12 +51,12 @@ const HomeMobile = ({subtitle, p1_text, p2_text}) => {
                 </p>
                 <div className="max-w-fit mt-10"> {/* buttons */}
                     <div className="flex flex-wrap">
-                        <Link to="contact" smooth duration={500} className="px-4 py-1 duration-500 shadow-box hover:shadow-none group border-solid border-2 border-black text-white bg-gradient-to-r from-buttongreen to-buttongreengradient cursor-pointer">
+                        <HashLink to="/contact" smooth duration={500} className="px-4 py-1 duration-500 shadow-box hover:shadow-none group border-solid border-2 border-black text-white bg-gradient-to-r from-buttongreen to-buttongreengradient cursor-pointer">
                             <p className={"text-whitehighlight"}>Contact Me</p>
-                        </Link>
-                        <RouterLink to="/blogs" smooth duration={500} className="px-4 py-1 duration-500 shadow-box hover:shadow-none group border-solid border-2 border-black text-white bg-gradient-to-r from-buttongreen to-buttongreengradient cursor-pointer">
+                        </HashLink>
+                        <HashLink to="/blogs" smooth duration={500} className="px-4 py-1 duration-500 shadow-box hover:shadow-none group border-solid border-2 border-black text-white bg-gradient-to-r from-buttongreen to-buttongreengradient cursor-pointer">
                             <p className={"text-whitehighlight"}>Read More</p>
-                        </RouterLink>
+                        </HashLink>
                         <a href={resume} className="px-4 py-1 duration-500 shadow-box hover:shadow-none group border-solid border-2 border-black text-white bg-gradient-to-r from-buttongreen to-buttongreengradient cursor-pointer">
                             <p className={"text-whitehighlight"}>See Resume</p>
                         </a>
@@ -67,14 +65,14 @@ const HomeMobile = ({subtitle, p1_text, p2_text}) => {
                 <div className="mt-4"> {/* social media icons */}
                     <SocialIcons/>
                 </div>
-                <Link to="projects" smooth={true} duration={1000}>
+                <HashLink to="/home/#works" smooth={true} duration={1000}>
                     <div className="mt-3">
                         <h4 className="float-left">Scroll to see my projects!</h4>
                         <span
                             className="float-left cursor-pointer hover:rotate-90 duration-300"> <HiArrowNarrowRight
                             size={25} color={"#0b5036"} className="ml-3"/> </span>
                     </div>
-                </Link>
+                </HashLink>
             </div>
         </div>
     );

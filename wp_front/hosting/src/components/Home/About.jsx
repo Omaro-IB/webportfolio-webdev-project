@@ -1,9 +1,10 @@
-import '../App.css';
+import '../../App.css';
 
+// TODO
 const About = () => {
     return (
-        <div className="bg-beige h-screen">
-            hi
+        <div className="bg-beige" id="about">
+
         </div>
     );
 };

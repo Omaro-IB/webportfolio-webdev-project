@@ -1,8 +1,9 @@
 import '../App.css';
 import React, { useState, useEffect } from 'react';
-import Navbar from "../components/Navbar.jsx";
-import BlogsDesktop from "../components/BlogsDesktop.jsx";
-import BlogsMobile from "../components/BlogsMobile.jsx";
+import NavbarDesktop from "../components/Navbar/NavbarDesktop.jsx";
+import BlogsDesktop from "../components/Blogs/BlogsDesktop.jsx";
+import BlogsMobile from "../components/Blogs/BlogsMobile.jsx";
+import NavbarMobile from "../components/Navbar/NavbarMobile.jsx";
 
 function BlogsPage() {
     const [matches, setMatches] = useState(
@@ -17,14 +18,15 @@ function BlogsPage() {
     if (matches) {
         return (
             <div>
-                <Navbar callingPage="blogs"></Navbar>
-                <BlogsDesktop/>
+                <NavbarDesktop left="Home" right="Contact">
+                    <BlogsDesktop/>
+                </NavbarDesktop>
             </div>
         )
     } else {
         return (
             <div>
-                <Navbar callingPage="blogs"></Navbar>
+                <NavbarMobile></NavbarMobile>
                 <BlogsMobile />
             </div>
         )

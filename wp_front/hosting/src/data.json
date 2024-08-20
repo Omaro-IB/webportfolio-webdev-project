@@ -2,7 +2,7 @@
   "text": {
     "home_p1": "Are you looking for someone driven and capable? Someone with an analytic and mathematical mindset? Or maybe you need someone with a comprehensive machine learning understanding? If so, please don't hesitate to reach out to me.",
     "home_p2": "I’m a data scientist with a focus on machine learning, computational mathematics, and also like network engineering too. Currently pursuing my bachelor's degree in computing, and I have lots of experience designing and developing apps for both web and Android.",
-    "home_sub": "Data Science & Development"
+    "home_sub": "Data Science, Networking, & Dev"
   },
   "projects": [
     {"id": "webportfolio-webdev-project", "title": "Web Portfolio", "description": "Of course I'll include my portfolio here", "demo":  "https://omaribrah.im", "learn_more": "20240818-WebPortfolio", "skills":  ["img:NodeJS.svg", "img:Express.png", "img:React.svg", "img:MongoDB.png", "img:JavaScript.png", "img:AWS.png"]},

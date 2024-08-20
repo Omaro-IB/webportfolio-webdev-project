@@ -1,6 +1,6 @@
 import React from 'react';
-import data from "../data.json"
-import { Link as RouterLink} from "react-router-dom";
+import data from "../../data.json"
+import {HashLink} from "react-router-hash-link";
 import { PiStackPlus } from "react-icons/pi";
 
 const ProjectBox = ({title, description, project_id, demo, learn_more, skills}) => {
@@ -19,8 +19,8 @@ const ProjectBox = ({title, description, project_id, demo, learn_more, skills}) 
     let skillTxts = []
     skills.forEach(skill => {
         const s = skill.split(':')
-        if (s[0] === 'img') {skillImgs.push(<img className={"m-1 h-6 sm:h-9"} src={"/assets/skillimages/" + s[1]} alt={s[1].substring(0, s[1].length - 4)} />)}
-        else if (s[0] === 'txt') {skillTxts.push(<div className={"m-1 bg-gradient-to-r from-[#d4af37] to-[#f3d882] rounded-sm border-2 flex items-center p-1"}>
+        if (s[0] === 'img') {skillImgs.push(<img key={s[1]} className={"m-1 h-6 sm:h-9"} src={"/assets/skillimages/" + s[1]} alt={s[1].substring(0, s[1].length - 4)} />)}
+        else if (s[0] === 'txt') {skillTxts.push(<div key={s[1]} className={"m-1 bg-gradient-to-r from-[#d4af37] to-[#f3d882] rounded-sm border-2 flex items-center p-1"}>
                                                     <PiStackPlus className={"w-[12px] sm:w-[25px] h-[12px] sm:h-[25px]"} />
                                                     <p className={"mx-1"}>{s[1]}</p>
                                                 </div>)}
@@ -48,11 +48,11 @@ const ProjectBox = ({title, description, project_id, demo, learn_more, skills}) 
                             Code
                         </button>
                     </a>
-                    <RouterLink to={"/blogs/"+learnLink} className={displayLearn? "p-2 duration-500 shadow-box2 hover:shadow-none border-solid border-2 border-buttongreenshadow bg-whitehighlight text-buttongreenshadow text-lg": "hidden"}>
+                    <HashLink to={"/blogs/"+learnLink} className={displayLearn? "p-2 duration-500 shadow-box2 hover:shadow-none border-solid border-2 border-buttongreenshadow bg-whitehighlight text-buttongreenshadow text-lg": "hidden"}>
                         <button>
                             Learn More
                         </button>
-                    </RouterLink>
+                    </HashLink>
                 </div>
 
                 {/*Skills*/}
@@ -67,14 +67,11 @@ const ProjectBox = ({title, description, project_id, demo, learn_more, skills}) 
 
 const Projects = () => {
     return (
-        <div id='projects' className='bg-beige py-14'> {/* Project div */}
-            <p className='self-center text-3xl sm:text-4xl font-bold border-b-4 text-black border-greydef mb-4 w-fit mx-auto'> {/* Title */}
-                <em className="text-greydef">/Home/</em>#Projects
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-3 max-w-fit mx-auto bg-blackshadow">  {/* Project boxes div */}
+        <div id='works' className='bg-beige'> {/* Project div */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 bg-blackshadow">  {/* Project boxes div */}
                 {data.projects.map((project) => (
-                    <div className={"sm:px-1 py-1 sm:my-0 my-1 bg-buttongreen sm:bg-blackshadow"}>
-                    <ProjectBox key={project.id} title={project.title} description={project.description} project_id={project.id}
+                    <div key={project.id} className={"sm:px-1 py-1 sm:my-0 my-1 bg-buttongreen sm:bg-blackshadow"}>
+                    <ProjectBox title={project.title} description={project.description} project_id={project.id}
                                 demo={project.demo} learn_more={project.learn_more} skills={project.skills}></ProjectBox>
                     </div>
                 ))}

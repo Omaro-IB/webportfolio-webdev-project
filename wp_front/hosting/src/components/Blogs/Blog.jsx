@@ -1,10 +1,10 @@
-import '../App.css';
+import '../../App.css';
 import { PiMediumLogoFill } from "react-icons/pi";
 import {FaLinkedin, FaTimes} from 'react-icons/fa';
 import Markdown from 'react-markdown'
 import "./Blog.css"
-import data from "../data.json"
-import { Link as RouterLink} from "react-router-dom";
+import data from "../../data.json"
+import {HashLink} from "react-router-hash-link";
 import { FaShareFromSquare } from "react-icons/fa6";
 import React, { useState } from 'react';
 
@@ -28,9 +28,9 @@ function Blog({blog_id, onClose}) {
         </div>
         <div className="origin-center mx-auto flex flex-col w-[90vw] sm:w-[50vw]">
             <div className={"flex flex-row w-full justify-between"}>
-                <RouterLink to={"/blogs/" + blog_id}>
+                <HashLink to={"/blogs/" + blog_id}>
                     <h1 className="font-bold text-3xl sm:text-5xl">{blog_data.title}</h1>
-                </RouterLink>
+                </HashLink>
             </div>
             <FaShareFromSquare className={"h-[25px] w-[25px] cursor-pointer"} onClick={() => {
                 navigator.clipboard.writeText("https://omaribrah.im/blogs/" + blog_id).then(displayMessage("Copied!"))
