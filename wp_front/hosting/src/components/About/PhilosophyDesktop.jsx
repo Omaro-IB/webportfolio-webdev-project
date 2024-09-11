@@ -24,10 +24,10 @@ const PhilosophyDesktop = () => {
                     <h1 className={"text-5xl p-3"}>{data["text"]["philosophy"][0][2]}</h1>
                     <p className={"text-lg px-3"} style={{fontFamily: "GTPressuraMonoLight"}} dangerouslySetInnerHTML={{__html: data["text"]["philosophy"][1][2]}}></p>
                 </div>
-                <div className={"bg-triangle3 p-5 w-7/12 rounded-lg self-end my-10 shadow-box"}>
-                    <GiButterflyFlower style={{width: 125, height: 125}}/>
-                    <h1 className={"text-5xl p-3"}>{data["text"]["philosophy"][0][3]}</h1>
-                    <p className={"text-lg px-3"} style={{fontFamily: "GTPressuraMonoLight"}} dangerouslySetInnerHTML={{__html: data["text"]["philosophy"][1][3]}}></p>
+                <div className={"bg-triangle3 p-5 w-7/12 self-end rounded-lg self-end my-10 shadow-box"}>
+                    <GiButterflyFlower style={{width: 125, height: 125}} className={"ml-auto"}/>
+                    <h1 className={"text-5xl p-3 text-end"}>{data["text"]["philosophy"][0][3]}</h1>
+                    <p className={"text-lg px-3 text-end"} style={{fontFamily: "GTPressuraMonoLight"}} dangerouslySetInnerHTML={{__html: data["text"]["philosophy"][1][3]}}></p>
                 </div>
             </div>
         </div>
