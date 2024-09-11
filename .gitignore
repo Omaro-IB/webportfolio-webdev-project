@@ -26,6 +26,8 @@ dist-ssr
 *.sln
 *.sw?
 *.old
+wp_front/hosting/src/components/.old/
+wp_front/hosting/src/components/.old/*
 
 # Packages and configs and stuff
 package.json

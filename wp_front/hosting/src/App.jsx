@@ -9,12 +9,14 @@ import {
     Route,
 } from "react-router-dom";
 import ContactPage from "./pages/ContactPage.jsx";
+import AboutPage from "./pages/AboutPage.jsx";
 
 const Main = () => {
     return (
         <Router> <Routes> {/* The Switch decides which component to show based on the current URL.*/}
             <Route exact path="/" Component={HomePage}/>
             <Route exact path="/home" Component={HomePage}/>
+            <Route exact path="/home/about" Component={AboutPage}/>
             <Route exact path="/contact" Component={ContactPage}/>
             <Route exact path="/demos/minimalrecipe-scripting-tool" Component={RecipeDemo}/>
             <Route exact path="/blogs" Component={BlogsPage}/>

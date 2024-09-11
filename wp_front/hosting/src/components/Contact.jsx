@@ -8,13 +8,13 @@ const Contact = () => {
     return (
         <div className={"mt-10 sm:mt-0 flex flex-col h-full w-full overflow-auto"}>
             <div className=''>  {/* Text */}
-                <p className="text-[1.3vw] font-['GTPressuraMono'] font-bold">
+                <p className="text-2xl sm:text-[1.3vw] font-['GTPressuraMono'] font-bold">
                     If you're interested in what I do, <a
                     className="underline text-buttongreen hover:text-buttongreenhighlight" href={rss}>subscribe
                     to my RSS feed!</a>
                 </p>
                 <br></br>
-                <p className="text-[1.3vw] font-['GTPressuraMono']">
+                <p className="text-2xl sm:text-[1.3vw] font-['GTPressuraMono']">
                     The best way to reach me is through the contact form below or via email at <u><a
                     className="text-buttongreen hover:text-buttongreenhighlight"
                     href={Scramble('lc158d7dlcxdlb12xc34lc15b6dl')}>{Scramble('dlcxdlb12xc34lc15b6dl')}</a></u>

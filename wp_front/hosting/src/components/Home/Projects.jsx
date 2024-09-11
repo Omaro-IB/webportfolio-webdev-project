@@ -68,14 +68,17 @@ const ProjectBox = ({title, description, project_id, demo, learn_more, skills}) 
 const Projects = () => {
     return (
         <div id='works' className='bg-beige'> {/* Project div */}
+            <div className={"sm:hidden py-1 bg-blackshadow"}></div>
             <div className="grid grid-cols-1 sm:grid-cols-3 bg-blackshadow">  {/* Project boxes div */}
                 {data.projects.map((project) => (
-                    <div key={project.id} className={"sm:px-1 py-1 sm:my-0 my-1 bg-buttongreen sm:bg-blackshadow"}>
-                    <ProjectBox title={project.title} description={project.description} project_id={project.id}
-                                demo={project.demo} learn_more={project.learn_more} skills={project.skills}></ProjectBox>
+                    <div key={project.id} className={"sm:px-1 sm:py-1 bg-buttongreen sm:bg-blackshadow"}>
+                        <ProjectBox title={project.title} description={project.description} project_id={project.id}
+                                    demo={project.demo} learn_more={project.learn_more}
+                                    skills={project.skills}></ProjectBox>
                     </div>
                 ))}
             </div>
+            <div className={"sm:hidden py-1 bg-blackshadow"}></div>
         </div>
     );
 };

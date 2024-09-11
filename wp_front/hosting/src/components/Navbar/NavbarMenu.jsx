@@ -21,8 +21,7 @@ const NavbarSection = ({title, texts, links, clickFunc}) => (
 
 const NavbarMenu = ({display, clickFunc}) => (
     <div className={display ? "flex flex-col p-5" : "hidden"}>
-        {/*TODO: Replace next line with this one <NavbarSection title={"About & Works"} texts={["Home", "About", "Works"]} links={["/home/#top", "/home/#about", "/home/#works"]} clickFunc={clickFunc}/>*/}
-        <NavbarSection title={"About & Works"} texts={["Home", "Works"]} links={["/home/#top", "/home/#works"]} clickFunc={clickFunc}/>
+        <NavbarSection title={"About & Works"} texts={["Home", "About", "Works"]} links={["/home/#top", "/home/about/#triangle", "/home/#works"]} clickFunc={clickFunc}/>
         <NavbarSection title={"Let's Talk"} texts={["Contact"]} links={["/contact"]} clickFunc={clickFunc}/>
         <NavbarSection title={"My Writings"} texts={["Blogs"]} links={["/blogs"]} clickFunc={clickFunc}/>
         <div className="mx-auto text-pinkbeige mt-6"><SocialIcons lightshadow={true}/></div>

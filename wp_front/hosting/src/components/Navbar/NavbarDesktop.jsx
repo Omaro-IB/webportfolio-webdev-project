@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import NavbarMenu from "./NavbarMenu.jsx";
 import ActionButton from "./ActionButton.jsx";
-import logo from "/assets/logo2.png";
+import logo from "/assets/logo.png";
 import {HashLink} from "react-router-hash-link";
 import SocialIcons from "../SocialIcons.jsx";
 
@@ -19,6 +19,7 @@ const NavbarDesktop = ({children, left, right}) => {
         elem = children
     }
 
+    // Set Links according to left and right text (if unknown, set to root path '/')
     let link_left = "/"
     if (left === "Home") {link_left = "/home/#top"}
     else if (left === "Contact") {link_left = "/contact"}
@@ -35,7 +36,7 @@ const NavbarDesktop = ({children, left, right}) => {
                     {/* Logo */}
                     <div className={"w-[50px] mx-auto h-full"}>
                         <HashLink to='/home/#top'>
-                            <img src={logo} alt="logo" className={"w-[50px] shadow-circle rounded-[50%] cursor-pointer"}/>
+                            <img src={logo} alt="logo" className={"w-[50px] cursor-pointer"}/>
                         </HashLink>
                     </div>
                     <div className={"h-full"}>

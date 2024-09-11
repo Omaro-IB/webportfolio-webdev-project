@@ -5,12 +5,10 @@ import NavbarMobile from "../components/Navbar/NavbarMobile.jsx";
 import HomeDesktop from "../components/Home/HomeDesktop.jsx";
 import Projects from "../components/Home/Projects.jsx";
 import HomeMobile from "../components/Home/HomeMobile.jsx";
-import About from "../components/Home/About.jsx";
 import data from "../data.json"
 
-const p1_text = data.text.home_p1
-const p2_text = data.text.home_p2
 const subtitle = data.text.home_sub
+const home_text = data.text.home
 
 function HomePage() {
     const [matches, setMatches] = useState(
@@ -26,8 +24,7 @@ function HomePage() {
         return (
             <div>
                 <NavbarDesktop left="Contact" right="Blogs">
-                    <HomeDesktop subtitle={subtitle} p1_text={p1_text} p2_text={p2_text}> </HomeDesktop>
-                    <About />
+                    <HomeDesktop subtitle={subtitle} home_text={home_text}> </HomeDesktop>
                     <Projects> </Projects>
                 </NavbarDesktop>
             </div>
@@ -37,8 +34,7 @@ function HomePage() {
             <div>
                 <NavbarMobile/>
                 <div className="flex flex-col">
-                    <HomeMobile subtitle={subtitle} p1_text={p1_text} p2_text={p2_text}> </HomeMobile>
-                    <About />
+                    <HomeMobile subtitle={subtitle} home_text={home_text}> </HomeMobile>
                     <Projects> </Projects>
                 </div>
             </div>

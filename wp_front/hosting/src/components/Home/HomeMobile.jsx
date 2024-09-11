@@ -6,6 +6,7 @@ import '../../App.css';
 import { TypeAnimation } from 'react-type-animation';
 import SocialIcons from "../SocialIcons.jsx";
 import resume from "/assets/resume.pdf";
+import React from "react";
 
 
 const TyperSmall = () => {
@@ -25,10 +26,10 @@ const TyperSmall = () => {
 };
 
 
-const HomeMobile = ({subtitle, p1_text, p2_text}) => {
+const HomeMobile = ({subtitle, home_text}) => {
     return (
         <div className="bg-beige flex flex-col">
-            <div className="bg-blackshadow grid grid-rows-1 grid-cols-1">  {/* name div */}
+            <div className="bg-blackshadow grid grid-rows-1 grid-cols-1 ">  {/* name div */}
                 <img src={hero} alt="hero" className="p-6 mx-auto" style={{gridColumn: 1, gridRow: 1}}></img>
                 <div className="mx-auto my-auto z-0" style={{gridColumn: 1, gridRow: 1}}>
                     <img src={me} alt="profile" className="w-[150px] h-[150px] mx-auto"></img>
@@ -40,26 +41,28 @@ const HomeMobile = ({subtitle, p1_text, p2_text}) => {
                     <p className="text-[40px] text-pinkbeige mb-6">/home</p>
                 </div>
             </div>
-            <div className="bg-beige p-8">  {/* info div */}
+            <div className="bg-beige p-8 ">  {/* info div */}
                 <h1 style={{fontFamily: "PlaakCondensed"}} className="text-8xl">Welcome!</h1>
                 <br></br>
-                <p style={{fontFamily: "GTPressuraMonoLight"}}
-                   className="self-start max-w-[75vw] text-gray-900 text-[15px]">
-                    {p1_text}
-                    <br></br><br></br>
-                    {p2_text}
-                </p>
-                <div className="max-w-fit mt-10"> {/* buttons */}
-                    <div className="flex flex-wrap">
+                <div style={{fontFamily:"GTPressuraMonoLight"}} className="self-start max-w-[75vw] text-gray-900 text-[15px]" dangerouslySetInnerHTML={{__html: home_text}} /> {/* big paragraph */}
+                <div style={{fontFamily:"GTPressuraMonoLight"}} className={"underline text-buttongreen hover:text-buttongreenhighlight"}><br/><HashLink to="/home/about/#triangle"><strong>Read More...</strong></HashLink></div>
+
+                <div className="flex flex-col mt-10 w-screen"> {/* buttons */}
+                    <div className="flex flex-row">
                         <HashLink to="/contact" smooth duration={500} className="px-4 py-1 duration-500 shadow-box hover:shadow-none group border-solid border-2 border-black text-white bg-gradient-to-r from-buttongreen to-buttongreengradient cursor-pointer">
                             <p className={"text-whitehighlight"}>Contact Me</p>
                         </HashLink>
                         <HashLink to="/blogs" smooth duration={500} className="px-4 py-1 duration-500 shadow-box hover:shadow-none group border-solid border-2 border-black text-white bg-gradient-to-r from-buttongreen to-buttongreengradient cursor-pointer">
-                            <p className={"text-whitehighlight"}>Read More</p>
+                            <p className={"text-whitehighlight"}>See Blogs</p>
                         </HashLink>
+                    </div>
+                    <div className="flex flex-row">
                         <a href={resume} className="px-4 py-1 duration-500 shadow-box hover:shadow-none group border-solid border-2 border-black text-white bg-gradient-to-r from-buttongreen to-buttongreengradient cursor-pointer">
-                            <p className={"text-whitehighlight"}>See Resume</p>
+                            <p className={"text-whitehighlight"}>View Resume</p>
                         </a>
+                        <HashLink to="/home/about/#triangle" smooth duration={500} className="px-4 py-1 duration-500 shadow-box hover:shadow-none group border-solid border-2 border-black text-white bg-gradient-to-r from-buttongreen to-buttongreengradient cursor-pointer">
+                            <p className={"text-whitehighlight"}>About Me</p>
+                        </HashLink>
                     </div>
                 </div>
                 <div className="mt-4"> {/* social media icons */}

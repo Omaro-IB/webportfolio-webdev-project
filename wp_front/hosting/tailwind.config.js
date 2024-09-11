@@ -30,7 +30,11 @@ module.exports = {
       'codegreen': '#4b7758',
       'codeorange': '#ca7430',
       'codered': '#76312a',
-      'codebg': '#101010'
+      'codebg': '#101010',
+      'triangle1': '#C96868',
+      'triangle2': '#709357',
+      'triangle3': '#FADFA1',
+      'triangle4': '#7EACB5',
     },
     extend: {
       boxShadow: {
