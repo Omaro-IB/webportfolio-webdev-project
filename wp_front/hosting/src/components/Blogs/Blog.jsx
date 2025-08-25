@@ -33,7 +33,7 @@ function Blog({blog_id, onClose}) {
                 </HashLink>
             </div>
             <FaShareFromSquare className={"h-[25px] w-[25px] cursor-pointer"} onClick={() => {
-                navigator.clipboard.writeText("https://omarwebportfolio.nfshost.com/blogs" + blog_id).then(displayMessage("Copied!"))
+                navigator.clipboard.writeText("https://omarwebportfolio.nfshost.com/blogs/" + blog_id).then(displayMessage("Copied!"))
             }}></FaShareFromSquare>
             <h2>{blog_data.date} &nbsp; &nbsp; • &nbsp; &nbsp; Omar Ibrahim</h2>
 
