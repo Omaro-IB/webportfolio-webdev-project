@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import ContactPage from "./pages/ContactPage.jsx";
 import AboutPage from "./pages/AboutPage.jsx";
+import axios from 'axios'
 
 const Main = () => {
     return (
@@ -27,6 +28,8 @@ const Main = () => {
 }
 
 function App() {
+    axios.get('https://omarwebportfolio.nfshost.com/api/test')
+
     return (
         <div>
             <Main />
