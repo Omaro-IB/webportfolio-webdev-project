@@ -15,7 +15,7 @@ const TyperBig = () => {
             sequence={[
                 '',
                 1000, // wait 1s
-                'omaribrah.im',
+                "Hi, I'm Omar",
             ]}
             wrapper="span"
             speed={30}

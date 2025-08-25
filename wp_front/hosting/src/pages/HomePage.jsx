@@ -33,7 +33,7 @@ function HomePage() {
         return (
             <div>
                 <NavbarMobile/>
-                <div className="flex flex-col">
+                <div>
                     <HomeMobile subtitle={subtitle} home_text={home_text}> </HomeMobile>
                     <Projects> </Projects>
                 </div>

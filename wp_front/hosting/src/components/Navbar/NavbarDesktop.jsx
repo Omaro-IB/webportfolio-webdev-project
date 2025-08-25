@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import NavbarMenu from "./NavbarMenu.jsx";
 import ActionButton from "./ActionButton.jsx";
-import logo from "/assets/logo.png";
 import {HashLink} from "react-router-hash-link";
 import SocialIcons from "../SocialIcons.jsx";
 
@@ -33,11 +32,8 @@ const NavbarDesktop = ({children, left, right}) => {
         <div className={"flex flex-row"}>
             <div className={"w-sides min-w-sides sticky top-0 left-0 h-screen bg-blackshadow py-10 overflow-clip"}>
                 <div className={"flex flex-col h-full items-center"}>
-                    {/* Logo */}
-                    <div className={"w-[50px] mx-auto h-full"}>
-                        <HashLink to='/home/#top'>
-                            <img src={logo} alt="logo" className={"w-[50px] cursor-pointer"}/>
-                        </HashLink>
+                    <div onClick={handleClick} className={"cursor-pointer h-full"}>
+                        <ActionButton nav={nav}/>
                     </div>
                     <div className={"h-full"}>
                         <p className={"rotate-90 underline text-4xl text-pinkbeige mt-24"}><HashLink to={link_left}>{left}</HashLink></p>
@@ -54,9 +50,6 @@ const NavbarDesktop = ({children, left, right}) => {
 
             <div className={"w-sides min-w-sides sticky top-0 right-0 h-screen bg-blackshadow pt-10 overflow-clip"}>
                 <div className={"flex flex-col h-full items-center"}>
-                    <div onClick={handleClick} className={"cursor-pointer h-full"}>
-                        <ActionButton nav={nav}/>
-                    </div>
                     <div className={"h-full text-center"}>
                         <p className={"rotate-270 underline text-4xl text-pinkbeige mb-40 mt-24"}><HashLink to={link_right}>{right}</HashLink></p>
                     </div>

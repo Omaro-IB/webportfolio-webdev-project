@@ -3,7 +3,7 @@ import React, {useEffect, useState} from 'react';
 import NavbarDesktop from "../components/Navbar/NavbarDesktop.jsx";
 import axios from 'axios'
 import NavbarMobile from "../components/Navbar/NavbarMobile.jsx";
-const baseUrl = 'https://fsop3.omaribrah.im:4442/recipe/'
+const baseUrl = 'https://omarwebportfolio.nfshost.com/api/recipe/'
 
 const downloadFile = (html) => {
     const element = document.createElement("a");

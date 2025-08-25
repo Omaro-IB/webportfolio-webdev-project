@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from 'axios'
-const baseUrl = 'https://fsop3.omaribrah.im:4442/submit'
+const baseUrl = 'https://omarwebportfolio.nfshost.com/api/submit'
 
 const ContactForm = () => {
     const [submitted, setSubmitted] = useState(0); // 0 = not submitted, 1 = success, 2 = failure

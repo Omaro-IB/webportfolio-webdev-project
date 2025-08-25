@@ -20,7 +20,7 @@ const NavbarSection = ({title, texts, links, clickFunc}) => (
 )
 
 const NavbarMenu = ({display, clickFunc}) => (
-    <div className={display ? "flex flex-col p-5" : "hidden"}>
+    <div className={display ? "flex flex-col p-5 w-full h-full" : "hidden"}>
         <NavbarSection title={"About & Works"} texts={["Home", "About", "Works"]} links={["/home/#top", "/home/about/#triangle", "/home/#works"]} clickFunc={clickFunc}/>
         <NavbarSection title={"Let's Talk"} texts={["Contact"]} links={["/contact"]} clickFunc={clickFunc}/>
         <NavbarSection title={"My Writings"} texts={["Blogs"]} links={["/blogs"]} clickFunc={clickFunc}/>

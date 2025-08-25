@@ -11,7 +11,7 @@ const BackToTriangle = () => {
     return (
         <HashLink to={"/home/about/#triangle"} className={"duration-500 shadow-box hover:shadow-none group border-solid border-2 border-black text-white bg-gradient-to-r from-buttongreen to-buttongreengradient p-1"}>
             <FaBackward className={"inline fill-whitehighlight"}/>
-            <p className={"inline ml-2 text-whitehighlight"}>Back to <strong><em>THE TRIANGLE</em></strong></p>
+            <p className={"inline ml-2 text-whitehighlight"}>Back</p>
         </HashLink>
     )
 }

@@ -3,26 +3,9 @@ import '../../App.css';
 import Blogs from "./Blogs.jsx";
 
 
-const TyperSmall = () => {
-    return (
-        <TypeAnimation
-            sequence={[
-                '',
-                1000, // wait 1s
-                'omaribrah.im',
-            ]}
-            wrapper="span"
-            speed={30}
-            style={{ fontFamily: 'Plaak', fontSize: '50px', color: '#e6e6e6', display: 'inline-block', zIndex: "20" }}
-            repeat={0}
-        />
-    );
-};
-
-
 const BlogsMobile = () => {
     return (
-        <div id="blogs" className="bg-beige flex flex-col">
+        <div id="blogs" className="bg-beige flex flex-col w-full h-full">
             <div className="bg-blackshadow grid grid-rows-1 grid-cols-1">  {/* hero div */}
                 <img src={hero} alt="hero" className="p-6 mx-auto" style={{gridColumn: 1, gridRow: 1}}></img>
                 <div className="self-end mx-auto" style={{gridColumn: 1, gridRow: 1}}>

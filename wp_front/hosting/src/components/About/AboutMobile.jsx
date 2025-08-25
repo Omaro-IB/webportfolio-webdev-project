@@ -11,7 +11,7 @@ const BackToTriangle = () => {
     return (
         <HashLink to={"/home/about/#triangle"} className={"duration-500 shadow-box hover:shadow-none group border-solid border-2 border-black text-white bg-gradient-to-r from-buttongreen to-buttongreengradient p-1"}>
             <FaBackward className={"inline fill-whitehighlight"}/>
-            <p className={"inline ml-2 text-whitehighlight"}>Back to <strong><em>THE TRIANGLE</em></strong></p>
+            <p className={"inline ml-2 text-whitehighlight"}>Back</p>
         </HashLink>
     )
 }
@@ -33,7 +33,9 @@ const AboutMobile = () => {
     const triangleSize = window.screen.width / 1.25
 
     return (
-        <div>
+        <div className={"flex flex-col h-full w-full"}>
+            <HashLink to='/home/#top'><p className={"mt-5 mx-auto text-lg underline bg-beige w-fit text-buttongreen hover:text-buttongreenhighlight"} style={{fontFamily:"GTPressuraMonoLight"}}><strong>Back to Home...</strong></p></HashLink>
+
             <div className={"h-[10vh]"}></div>
             <div id="whoami" className={"p-4"}>
                 <BackToTriangle />

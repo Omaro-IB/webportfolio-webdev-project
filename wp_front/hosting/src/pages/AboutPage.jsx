@@ -31,13 +31,19 @@ function AboutPage() {
         )
     } else {
         return (
+            // <div>
+            //     <NavbarMobile ></NavbarMobile>
+            //     <div className="bg-repeat min-h-screen" style={{backgroundImage: `url('/assets/background_about.jpg')` }}>
+            //         <HashLink to='/home/#top'><p className={"mt-5 mx-auto text-lg underline bg-beige w-fit text-buttongreen hover:text-buttongreenhighlight"} style={{fontFamily:"GTPressuraMonoLight"}}><strong>Back to Home...</strong></p></HashLink>
+            //         <div className="pt-8">  {/* info div */}
+            //             <AboutMobile />
+            //         </div>
+            //     </div>
+            // </div>
             <div>
-                <NavbarMobile ></NavbarMobile>
-                <div className="bg-repeat flex flex-col min-h-screen" style={{backgroundImage: `url('/assets/background_about.jpg')` }}>
-                    <HashLink to='/home/#top'><p className={"mt-5 mx-auto text-lg underline bg-beige w-fit text-buttongreen hover:text-buttongreenhighlight"} style={{fontFamily:"GTPressuraMonoLight"}}><strong>Back to Home...</strong></p></HashLink>
-                    <div className="pt-8">  {/* info div */}
-                        <AboutMobile />
-                    </div>
+                <NavbarMobile />
+                <div className={"flex bg-repeat"} style={{backgroundImage: `url('/assets/background_about.jpg')` }}>
+                    <AboutMobile />
                 </div>
             </div>
         )
