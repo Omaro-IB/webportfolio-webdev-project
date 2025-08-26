@@ -28,7 +28,7 @@ const TyperSmall = () => {
 
 const HomeMobile = ({subtitle, home_text}) => {
     return (
-        <div className="bg-beige flex flex-col">
+        <div className="bg-beige w-screen">
             <div className="bg-blackshadow grid grid-rows-1 grid-cols-1 ">  {/* name div */}
                 <img src={hero} alt="hero" className="p-6 mx-auto" style={{gridColumn: 1, gridRow: 1}}></img>
                 <div className="mx-auto my-auto z-0" style={{gridColumn: 1, gridRow: 1}}>

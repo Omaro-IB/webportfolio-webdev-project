@@ -33,7 +33,7 @@ const AboutMobile = () => {
     const triangleSize = window.screen.width / 1.25
 
     return (
-        <div className={"flex flex-col h-full w-full"}>
+        <div className={"flex flex-col"}>
             <HashLink to='/home/#top'><p className={"mt-5 mx-auto text-lg underline bg-beige w-fit text-buttongreen hover:text-buttongreenhighlight"} style={{fontFamily:"GTPressuraMonoLight"}}><strong>Back to Home...</strong></p></HashLink>
 
             <div className={"h-[10vh]"}></div>

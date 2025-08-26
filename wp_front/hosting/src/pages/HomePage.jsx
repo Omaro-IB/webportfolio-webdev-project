@@ -31,9 +31,9 @@ function HomePage() {
         )
     } else {
         return (
-            <div>
+            <div className={"w-fit overflow-clip"}>
                 <NavbarMobile/>
-                <div>
+                <div className={"w-full"}>
                     <HomeMobile subtitle={subtitle} home_text={home_text}> </HomeMobile>
                     <Projects> </Projects>
                 </div>
