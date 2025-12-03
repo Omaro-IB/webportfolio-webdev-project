@@ -1,7 +1,7 @@
 {
   "text": {
     "home_sub": "Data Science, Networking, & Dev",
-    "home": "<p>I'm a Computer Science graduate with multiple internships, and currently interning at <a href='https://clear-sky.ai/'><u>Clearsky AI</u></a>. I am focusing on data science, software development (Web/Android), and am particularly interested in computer vision and computational mathematics. I also like network engineering and cybersecurity too.<br /><br />Successfully completed my bachelor's degree in computing, with distinction and specialization in Artificial Intelligence, and a computer vision related thesis.</p>",
+    "home": "<p>I'm a Computer Science graduate with multiple internships, and currently working full time at <a href='https://clear-sky.ai/'><u>Clearsky AI</u></a>. I am focusing on AI engineering, software development (Web/Android), and am particularly interested in computer vision, process mining, and computational mathematics. I also like network engineering and cybersecurity too.<br /><br />Successfully completed my bachelor's degree in computing, with distinction and specialization in Artificial Intelligence, and a computer vision related thesis.</p>",
     "specializations": [
       ["Computer Vision", "Networking & Sys Admin", "Android Dev", "Web Dev"],
       [["img:mu.svg"], ["img:gnu.svg"], ["img:Kotlin.svg", "img:JetpackCompose.svg"], ["img:NodeJS.svg", "img:React.svg"]],
@@ -15,7 +15,7 @@
       "Everything should be accomplished with the least overhead and complexity as possible. <a href='https://berthub.eu/articles/posts/a-2024-plea-for-lean-software/'><u>Opening a garage door should not take more than 50 million lines of code</u></a>. Achieving this efficiency was one of the highest values of computer programmers, and the best programs were often called <a href='https://en.m.wikipedia.org/w/index.php?title=Elegance&diffonly=true'><u>elegant</u></a>, a term used by mathematicians to describe a proof which is tidy, parsimonious, and powerful."
       ]
     ],
-    "whoami": "<p>I'm a Computer Science graduate with multiple internships, and currently interning at <a href='https://clear-sky.ai/'><u>Clearsky AI</u></a>. I am focusing on data science, software development (Web/Android), and am particularly interested in computer vision and computational mathematics. I also like network engineering and cybersecurity too.<br /><br />Successfully completed my bachelor's degree in computing, with distinction and specialization in Artificial Intelligence, and a computer vision related thesis.</p>"
+    "whoami": "<p>I'm a Computer Science graduate with multiple internships, and currently working full time at <a href='https://clear-sky.ai/'><u>Clearsky AI</u></a>. I am focusing on AI engineering, software development (Web/Android), and am particularly interested in computer vision, process mining, and computational mathematics. I also like network engineering and cybersecurity too.<br /><br />Successfully completed my bachelor's degree in computing, with distinction and specialization in Artificial Intelligence, and a computer vision related thesis.</p>"
   },
   "projects": [
     {"id": "360camera-CV-project", "title": "Inverted 360 camera mosaic using openCV", "description": "My undergrad thesis capstone project to record 16 view-points of the same object.", "demo": "disabled", "learn_more": "disabled", "skills": ["img:opencv.png", "img:Numpy.svg", "img:flask.png", "txt:Data Mining"]},
