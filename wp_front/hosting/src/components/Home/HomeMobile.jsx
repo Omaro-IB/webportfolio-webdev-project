@@ -45,24 +45,15 @@ const HomeMobile = ({subtitle, home_text}) => {
                 <h1 style={{fontFamily: "PlaakCondensed"}} className="text-8xl">Welcome!</h1>
                 <br></br>
                 <div style={{fontFamily:"GTPressuraMonoLight"}} className="self-start max-w-[75vw] text-gray-900 text-[20px]" dangerouslySetInnerHTML={{__html: home_text}} /> {/* big paragraph */}
-                <div style={{fontFamily:"GTPressuraMonoLight"}} className={"underline text-buttongreen hover:text-buttongreenhighlight"}><br/><HashLink to="/home/about/#triangle"><strong>Read More...</strong></HashLink></div>
 
                 <div className="flex flex-col mt-10 w-screen text-[18px]"> {/* buttons */}
                     <div className="flex flex-row">
                         <HashLink to="/contact" smooth duration={500} className="px-4 py-1 duration-500 shadow-box hover:shadow-none group border-solid border-2 border-black text-white bg-gradient-to-r from-buttongreen to-buttongreengradient cursor-pointer">
                             <p className={"text-whitehighlight"}>Contact Me</p>
                         </HashLink>
-                        <HashLink to="/blogs" smooth duration={500} className="px-4 py-1 duration-500 shadow-box hover:shadow-none group border-solid border-2 border-black text-white bg-gradient-to-r from-buttongreen to-buttongreengradient cursor-pointer">
-                            <p className={"text-whitehighlight"}>See Blogs</p>
-                        </HashLink>
-                    </div>
-                    <div className="flex flex-row">
                         <a href={resume} className="px-4 py-1 duration-500 shadow-box hover:shadow-none group border-solid border-2 border-black text-white bg-gradient-to-r from-buttongreen to-buttongreengradient cursor-pointer">
                             <p className={"text-whitehighlight"}>View Resume</p>
                         </a>
-                        <HashLink to="/home/about/#triangle" smooth duration={500} className="px-4 py-1 duration-500 shadow-box hover:shadow-none group border-solid border-2 border-black text-white bg-gradient-to-r from-buttongreen to-buttongreengradient cursor-pointer">
-                            <p className={"text-whitehighlight"}>About Me</p>
-                        </HashLink>
                     </div>
                 </div>
                 <div className="mt-4"> {/* social media icons */}

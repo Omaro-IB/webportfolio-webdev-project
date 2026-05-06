@@ -2,7 +2,6 @@ import '../App.css';
 import React, {useEffect, useState} from 'react';
 import NavbarDesktop from "../components/Navbar/NavbarDesktop.jsx";
 import axios from 'axios'
-import NavbarMobile from "../components/Navbar/NavbarMobile.jsx";
 const baseUrl = 'https://omarwebportfolio.nfshost.com/api/recipe/'
 
 const downloadFile = (html) => {
@@ -90,7 +89,6 @@ function RecipeDemo() {
     } else {
         return (
             <div>
-                <NavbarMobile />
                 <Demo />
             </div>
         )

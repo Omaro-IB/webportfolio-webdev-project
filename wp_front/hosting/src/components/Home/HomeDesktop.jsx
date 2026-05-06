@@ -7,6 +7,7 @@ import {TypeAnimation} from 'react-type-animation';
 import resume from "/assets/resume.pdf";
 import Splitscreen from "../Splitscreen.jsx";
 import React from "react";
+import SocialIcons from "../SocialIcons.jsx";
 
 
 const TyperBig = () => {
@@ -50,20 +51,16 @@ const Info = ({home_text}) => {
             <div className="flex flex-col ml-4 text-gray-900 px-8 mt-4">
                 <h1 style={{fontFamily:"PlaakCondensed"}} className="text-8xl mb-4">Welcome!</h1>
                 <div style={{fontFamily:"GTPressuraMonoLight"}} className={"overflow-auto"} dangerouslySetInnerHTML={{__html: home_text}} /> {/* big paragraph */}
-                <div style={{fontFamily:"GTPressuraMonoLight"}} className={"underline text-buttongreen hover:text-buttongreenhighlight"}><br/><HashLink to="/home/about/#triangle"><strong>Read More...</strong></HashLink></div>
                 <div className="flex flex-row mt-12 mb-2"> {/* buttons div */}
                     <HashLink to="/contact" smooth duration={500} className="px-4 py-2 duration-500 shadow-box hover:shadow-none group border-solid border-2 border-black text-white bg-gradient-to-r from-buttongreen to-buttongreengradient cursor-pointer">
                         <p className={"text-whitehighlight"}>Contact Me</p>
                     </HashLink>
-                    <HashLink to="/blogs" className="px-4 py-2 self-start duration-500 shadow-box hover:shadow-none group border-solid border-2 border-black text-white bg-gradient-to-r from-buttongreen to-buttongreengradient cursor-pointer">
-                        <p className={"text-whitehighlight"}>See Blogs</p>
-                    </HashLink>
                     <a href={resume} className="px-4 py-2 self-start duration-500 shadow-box hover:shadow-none group border-solid border-2 border-black text-white bg-gradient-to-r from-buttongreen to-buttongreengradient cursor-pointer">
                         <p className={"text-whitehighlight"}>View Resume</p>
                     </a>
-                    <HashLink to="/home/about/#triangle" className="px-4 py-2 self-start duration-500 shadow-box hover:shadow-none group border-solid border-2 border-black text-white bg-gradient-to-r from-buttongreen to-buttongreengradient cursor-pointer">
-                        <p className={"text-whitehighlight"}>About Me</p>
-                    </HashLink>
+                </div>
+                <div className="mt-4 text-sm text-center"> {/* social media icons */}
+                    <SocialIcons/>
                 </div>
                 <HashLink to="/home/#works" smooth={true} duration={1000}>
                     <div className="flex flex-row items-center group">

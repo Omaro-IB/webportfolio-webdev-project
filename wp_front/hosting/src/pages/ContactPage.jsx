@@ -1,7 +1,6 @@
 import '../App.css';
 import NavbarDesktop from "../components/Navbar/NavbarDesktop.jsx";
 import {useEffect, useState} from "react";
-import NavbarMobile from "../components/Navbar/NavbarMobile.jsx";
 import Contact from "../components/Contact.jsx";
 import hero_desktop from '/assets/contact-hero-desktop.jpg'
 import hero_mobile from '/assets/contact-hero-mobile.jpg'
@@ -37,7 +36,6 @@ function ContactPage() {
     } else {
         return (
             <div>
-                <NavbarMobile />
                 <div className={"flex flex-col"}>
                     <div className="bg-blackshadow grid grid-rows-1 grid-cols-1">  {/* hero div */}
                         <img src={hero_mobile} alt="hero" className="p-6 mx-auto" style={{gridColumn: 1, gridRow: 1}}></img>

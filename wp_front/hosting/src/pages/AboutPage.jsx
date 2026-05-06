@@ -1,7 +1,6 @@
 import '../App.css';
 import React, {useEffect, useState} from "react";
 import NavbarDesktop from "../components/Navbar/NavbarDesktop.jsx";
-import NavbarMobile from "../components/Navbar/NavbarMobile.jsx";
 import {HashLink} from "react-router-hash-link";
 import AboutDesktop from "../components/About/AboutDesktop.jsx";
 import AboutMobile from "../components/About/AboutMobile.jsx";
@@ -41,7 +40,6 @@ function AboutPage() {
             //     </div>
             // </div>
             <div>
-                <NavbarMobile />
                 <div className={"flex bg-repeat"} style={{backgroundImage: `url('/assets/background_about.jpg')` }}>
                     <AboutMobile />
                 </div>

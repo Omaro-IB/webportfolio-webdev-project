@@ -1,7 +1,6 @@
 import '../App.css';
 import React, { useState, useEffect } from 'react';
 import NavbarDesktop from "../components/Navbar/NavbarDesktop.jsx";
-import NavbarMobile from "../components/Navbar/NavbarMobile.jsx";
 import HomeDesktop from "../components/Home/HomeDesktop.jsx";
 import Projects from "../components/Home/Projects.jsx";
 import HomeMobile from "../components/Home/HomeMobile.jsx";
@@ -32,7 +31,6 @@ function HomePage() {
     } else {
         return (
             <div className={"w-fit overflow-clip"}>
-                <NavbarMobile/>
                 <div className={"w-full"}>
                     <HomeMobile subtitle={subtitle} home_text={home_text}> </HomeMobile>
                     <Projects> </Projects>

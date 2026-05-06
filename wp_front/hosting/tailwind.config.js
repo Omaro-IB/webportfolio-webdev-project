@@ -44,11 +44,11 @@ module.exports = {
         'circle': '1px 1px 1px 0 rgba(56, 56, 56, 1)'
       },
       width: {
-        'center': '92%',
-        'sides': '4%'
+        'center': '95%',
+        'sides': '2.5%'
       },
       minWidth: {
-        'sides': '60px'
+        'sides': '50px'
       },
       rotate: {
         '270': '270deg'
